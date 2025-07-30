@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --primary-glow: rgba(0, 123, 255, 0.4);
+    --card-bg: rgba(30, 30, 47, 0.5);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #adb5bd;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a237e, #1e1e2f, #283593);
+    background-size: 200% 200%;
+    animation: gradient-animation 20s ease infinite;
+    color: var(--text-secondary);
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--card-border);
+    padding: 1rem 1.5rem;
+}
+
+.card-header .h5 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.card-title {
+    color: var(--text-primary);
+}
+
+
+.user-profile-card-large {
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-profile-card-large .profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.75rem;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.user-profile-card-large .name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 0.1rem;
+}
+
+.user-profile-card-large .member-since {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.user-profile-card-large .league-info {
+    margin-top: 0.5rem;
+}
+
+.user-profile-card-large .league-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.1rem;
+}
+
+.user-profile-card-large .league-points {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.user-profile-card-large .league-icon {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+    margin-bottom: 0;
+}
+
+
+.table {
+    --bs-table-bg: transparent;
+    color: var(--text-secondary);
+}
+
+.table thead {
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.table td,
+.table th {
+    border-top: 1px solid var(--card-border);
+    padding: 1.25rem 1.5rem;
+    vertical-align: middle;
+}
+
+.table-borderless td,
+.table-borderless th {
+    border: 0;
+}
+
+.table strong.text-white {
+    color: var(--text-primary) !important;
+}
+
+
+.milestone-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.milestone-item.completed {
+    background-color: rgba(0, 227, 150, 0.1);
+    border-left-color: #00E396 !important;
+}
+
+.progress {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    padding: 0;
+    height: 10px;
+}
+
+.progress-bar {
+    border-radius: 50px;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}
+
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.btn-outline-light {
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+}
+
+
+.points-display .display-2 {
+    font-weight: 700;
+    color: var(--text-primary);
+    background: linear-gradient(45deg, #007bff, #00e396);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}

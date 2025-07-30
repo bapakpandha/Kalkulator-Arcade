@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="index-container">
+    <div class="main-title-wrapper">
+        <h1 class="main-title">
+            <i class="fa-solid fa-gamepad title-icon"></i>
+            Kalkulator Arcade
+        </h1>
+        <p class="main-subtitle">Kalkulator Poin Arcade 2025</p>
+    </div>
+
+    <nav class="d-flex justify-content-center mb-4">
+        <a href="{{ url_for('index') }}" class="btn btn-primary mx-2"><i class="fa-solid fa-calculator me-2"></i>Kalkulator</a>
+        <a href="{{ url_for('leaderboard') }}" class="btn btn-outline-light mx-2"><i class="fa-solid fa-trophy me-2"></i>Leaderboard</a>
+    </nav>
+    <div class="calc-card">
+        <h3 class="text-center">Hitung Poin Anda</h3>
+        <form method="post" novalidate id="profile-form">
+            <div class="mb-3">
+                <label for="profile_url" class="form-label">URL Profil Cloud Skills Boost</label>
+                <input type="url" id="profile_url" name="profile_url" class="form-control form-control-lg"
+                    placeholder="https://www.cloudskillsboost.google/public_profiles/..." required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
+                <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                <i class="fa-solid fa-calculator me-2"></i>
+                <span>Hitung Sekarang</span>
+            </button>
+        </form>
+    </div>
+    
+    <p class="footer-note">Pastikan profil Anda diatur ke 'Publik' untuk perhitungan.</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('profile-form');
+    if(form) {
+        form.addEventListener('submit', function (event) {
+            const urlInput = document.getElementById('profile_url');
+            if (urlInput.checkValidity() && urlInput.value.startsWith('https://www.cloudskillsboost.google/public_profiles/')) {
+                const btn = document.getElementById('submit-btn');
+                const spinner = btn.querySelector('.spinner-border');
+                const icon = btn.querySelector('.fa-calculator');
+                const text = btn.querySelector('span:not(.spinner-border)');
+
+                spinner.classList.remove('d-none');
+                icon.classList.add('d-none');
+                text.textContent = 'Menghitung...';
+                btn.disabled = true;
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

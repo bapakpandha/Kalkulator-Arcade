@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="d-flex justify-content-center mb-4">
+    <a href="{{ url_for('index') }}" class="btn btn-outline-light mx-2"><i class="fa-solid fa-calculator me-2"></i>Kalkulator</a>
+    <a href="{{ url_for('leaderboard') }}" class="btn btn-primary mx-2"><i class="fa-solid fa-trophy me-2"></i>Leaderboard</a>
+</nav>
+
+<div class="leaderboard-container">
+    <div class="leaderboard-header">
+        <h1>Papan Peringkat</h1>
+        <p>Score tertinggi berdasarkan hasil pengecekan!</p>
+    </div>
+
+    {% if leaders and leaders|length >= 1 %}
+    <div class="podium">
+        {% if leaders|length >= 2 %}
+        <div class="podium-card rank-2">
+            <div class="podium-rank rank-2">#2</div>
+            {% if leaders[1].photo_url %}
+                <img src="{{ leaders[1].photo_url }}" alt="Avatar" class="podium-avatar">
+            {% else %}
+                <div class="podium-avatar-initial initial-bg-1">{{ leaders[1].name[0]|upper }}</div>
+            {% endif %}
+            <h4 class="podium-name">{{ leaders[1].name }}</h4>
+            <span class="podium-score">{{ "%.1f"|format(leaders[1].score) }} points</span>
+        </div>
+        {% endif %}
+
+        <div class="podium-card rank-1">
+            <div class="podium-rank rank-1">#1</div>
+            {% if leaders[0].photo_url %}
+                <img src="{{ leaders[0].photo_url }}" alt="Avatar" class="podium-avatar">
+            {% else %}
+                <div class="podium-avatar-initial initial-bg-2">{{ leaders[0].name[0]|upper }}</div>
+            {% endif %}
+            <h4 class="podium-name">{{ leaders[0].name }}</h4>
+            <span class="podium-score">{{ "%.1f"|format(leaders[0].score) }} points</span>
+        </div>
+
+        {% if leaders|length >= 3 %}
+        <div class="podium-card rank-3">
+            <div class="podium-rank rank-3">#3</div>
+            {% if leaders[2].photo_url %}
+                <img src="{{ leaders[2].photo_url }}" alt="Avatar" class="podium-avatar">
+            {% else %}
+                <div class="podium-avatar-initial initial-bg-3">{{ leaders[2].name[0]|upper }}</div>
+            {% endif %}
+            <h4 class="podium-name">{{ leaders[2].name }}</h4>
+            <span class="podium-score">{{ "%.1f"|format(leaders[2].score) }} points</span>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if leaders|length > 3 %}
+    <div class="rankings-list-card">
+        <h3>List orang rajin</h3>
+        {% for leader in leaders[3:] %}
+        <div class="ranking-item">
+            <div class="ranking-pos">#{{ loop.index + 3 }}</div>
+            {% if leader.photo_url %}
+                 <img src="{{ leader.photo_url }}" alt="Avatar" class="ranking-avatar">
+            {% else %}
+                <div class="ranking-avatar-initial initial-bg-1">{{ leader.name[0]|upper }}</div>
+            {% endif %}
+            <div class="ranking-name">{{ leader.name }}</div>
+            <div class="ranking-score">{{ "%.1f"|format(leader.score) }} points</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if not leaders %}
+    <div class="text-center text-white-50 p-5 glass-card" style="max-width: 900px; margin: 0 auto;">
+        <i class="fa-solid fa-ghost fa-3x mb-3"></i>
+        <p>Belum ada data di leaderboard. Jadilah yang pertama!</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="d-flex justify-content-center mb-4">
+    <a href="{{ url_for('index') }}" class="btn btn-outline-light mx-2"><i class="fa-solid fa-calculator me-2"></i>Kalkulator</a>
+    <a href="{{ url_for('leaderboard') }}" class="btn btn-outline-light mx-2"><i class="fa-solid fa-trophy me-2"></i>Leaderboard</a>
+</nav>
+
+<div class="text-center mb-5">
+    <h1 class="display-5 fw-bold text-white">Laporan Profil & Event Arcade</h1>
+    <p class="text-white-50">Analisis lengkap untuk profil dan partisipasi Anda dalam event Arcade.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-lg-5 d-flex">
+        <div class="card glass-card user-profile-card-large w-100">
+            <img src="{{ profile_summary.photo_url or url_for('static', filename='images/default-avatar.png') }}" alt="Avatar" class="profile-avatar">
+            <h2 class="name">{{ profile_summary.name }}</h2>
+            <p class="member-since">{{ profile_summary.member_since }}</p>
+            
+            <div class="league-info">
+                <h3 class="league-name">{{ profile_summary.league_name }}</h3>
+                <p class="league-points">{{ "{:,}".format(profile_summary.league_points) }} Points</p>
+                {% if profile_summary.league_icon_url %}
+                <img src="{{ profile_summary.league_icon_url }}" alt="{{ profile_summary.league_name }}" class="league-icon">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7 d-flex">
+        <div class="card glass-card w-100">
+            <div class="card-body p-4 d-flex flex-column">
+                <h5 class="card-title text-white mb-3">Aktivitas Harian (Badge Event)</h5>
+                <div id="dailyActivityChart" class="flex-grow-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-12 col-lg-4 d-flex">
+        <div class="card glass-card w-100 points-display">
+            <div class="card-body text-center d-flex flex-column justify-content-center p-4">
+                <h5 class="text-white-50">Total Poin Event</h5>
+                <p class="display-2 fw-bolder text-white my-2">{{ "%.1f"|format(arcade_summary.points_total) }}</p>
+                <div class="text-primary fw-bold">
+                    <i class="fa-solid fa-star me-1"></i>
+                    {{ arcade_summary.milestone }}
+                </div>
+                <hr class="border-secondary my-4 w-75 mx-auto">
+                <div class="d-flex justify-content-between text-white-50 small">
+                    <span>Poin Dasar Event:</span>
+                    <strong class="text-white">{{ "%.1f"|format(arcade_summary.points_base) }}</strong>
+                </div>
+                <div class="d-flex justify-content-between text-white-50 small mt-1">
+                    <span>Bonus Milestone:</span>
+                    <strong class="text-white">+{{ "%.1f"|format(arcade_summary.points_bonus) }}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-8 d-flex">
+        <div class="card glass-card w-100">
+            <div class="card-body p-4 d-flex flex-column">
+                <h5 class="card-title text-white mb-3">Poin Event per Kategori</h5>
+                <div id="pointsChart" class="flex-grow-1"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-12">
+        <div class="card glass-card">
+            <div class="card-header">
+                <h5 class="mb-0 text-white"><i class="fa-solid fa-chart-pie"></i>Informasi Poin Event</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-borderless table-hover mb-0 align-middle">
+                        <thead>
+                            <tr>
+                                <th>Kategori</th>
+                                <th class="text-end">Jumlah Badge</th>
+                                <th class="text-end">Total Poin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% set points_data = get_points() %}
+                            {% set categories = [
+                            ('arcade','Arcade','#00E396','fa-gamepad'),
+                            ('trivia','Trivia','#008FFB','fa-question-circle'),
+                            ('skill','Skill','#6c757d','fa-graduation-cap'),
+                            ('extra','EkstraSkill','#FFC107','fa-bolt')
+                            ] %}
+                            {% for cat, lbl, color, icon in categories %}
+                            {% if arcade_summary.counts.get(cat, 0) > 0 %}
+                            <tr>
+                                <td>
+                                    <span class="fa-stack fa-1x me-2" style="color: {{ color }}; font-size: 0.8em;">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fas {{ icon }} fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    {{ lbl }}
+                                </td>
+                                <td class="text-end fs-5">{{ arcade_summary.counts.get(cat, 0) }}</td>
+                                <td class="text-end fs-5">{{ "%.1f"|format(arcade_summary.counts.get(cat, 0) * points_data[cat]) }}</td>
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="card glass-card">
+            <div class="card-header">
+                <h5 class="mb-0 text-white"><i class="fa-solid fa-trophy"></i>Progress Milestones Event</h5>
+            </div>
+            <div class="card-body p-4">
+                {% for m in arcade_summary.milestone_progress %}
+                <div class="milestone-item p-3 mb-3 {% if m.is_complete %}completed{% endif %}" style="border-left: 4px solid {{ m.color }};">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="mb-0 text-white fw-bold"><i class="fa-solid {{ m.icon }} me-2" style="color: {{ m.color }};"></i>{{ m.name }}</h6>
+                        <div>
+                            {% if m.is_complete %}
+                            <span class="badge bg-success-subtle text-success-emphasis rounded-pill px-2 py-1"><i class="fa-solid fa-check me-1"></i> Selesai (+{{ m.bonus_points }} Poin)</span>
+                            {% else %}
+                            <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-2 py-1 fw-bold">+{{ m.bonus_points }} Poin Bonus</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex justify-content-between align-items-end mb-1 small"><span class="text-white-50">Game Badges</span><span class="fw-bold text-white">{{ m.progress.arcade.current }}/{{ m.progress.arcade.required }}</span></div>
+                            <div class="progress"><div class="progress-bar" role="progressbar" style="width: {{ m.progress.arcade.percentage|int }}%; background-color: #00E396;" aria-valuenow="{{ m.progress.arcade.percentage }}" aria-valuemin="0" aria-valuemax="100"></div></div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex justify-content-between align-items-end mb-1 small"><span class="text-white-50">Trivia Badges</span><span class="fw-bold text-white">{{ m.progress.trivia.current }}/{{ m.progress.trivia.required }}</span></div>
+                            <div class="progress"><div class="progress-bar" role="progressbar" style="width: {{ m.progress.trivia.percentage|int }}%; background-color: #008FFB;" aria-valuenow="{{ m.progress.trivia.percentage }}" aria-valuemin="0" aria-valuemax="100"></div></div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex justify-content-between align-items-end mb-1 small"><span class="text-white-50">Skill Badges</span><span class="fw-bold text-white">{{ m.progress.skill.current }}/{{ m.progress.skill.required }}</span></div>
+                            <div class="progress"><div class="progress-bar" role="progressbar" style="width: {{ m.progress.skill.percentage|int }}%; background-color: #6c757d;" aria-valuenow="{{ m.progress.skill.percentage }}" aria-valuemin="0" aria-valuemax="100"></div></div>
+                        </div>
+                    </div>
+                </div>
+                {% if not loop.last %}<hr class="border-secondary my-4">{% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="card glass-card">
+            <div class="card-header">
+                <h5 class="mb-0 text-white"><i class="fa-solid fa-list-check"></i>Aktivitas Badge Event</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-borderless table-hover mb-0 align-middle">
+                        <thead>
+                            <tr>
+                                <th>Nama Badge</th>
+                                <th>Kategori</th>
+                                <th class="text-end">Tanggal Diperoleh</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% set category_styles = { 'arcade': {'color': '#00E396', 'icon': 'fa-gamepad', 'label': 'Arcade'}, 'trivia': {'color': '#008FFB', 'icon': 'fa-question-circle', 'label': 'Trivia'}, 'skill': {'color': '#6c757d', 'icon': 'fa-graduation-cap', 'label': 'Skill'}, 'extra': {'color': '#FFC107', 'icon': 'fa-bolt', 'label': 'Poin Ekstra'} } %}
+                            {% for name, tipe, date in profile_summary.event_badges %}
+                            {% set style = category_styles.get(tipe, {'label': tipe|capitalize, 'color': '#343a40', 'icon': 'fa-question'}) %}
+                            <tr>
+                                <td><strong class="text-white">{{ name }}</strong></td>
+                                <td><span class="badge px-2 py-1" style="background-color: {{ style.color }}; color: #fff; font-size: 0.8rem; font-weight: 600;"><i class="fas {{ style.icon }} me-1"></i> {{ style.label }}</span></td>
+                                <td class="text-end text-white-50">{{ date.strftime('%d %B %Y') }}</td>
+                            </tr>
+                            {% endfor %}
+                            {% if not profile_summary.event_badges %}
+                            <tr><td colspan="3" class="text-center text-white-50 py-5">Tidak ada aktivitas badge event yang ditemukan.</td></tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 text-center mt-5">
+        <a href="{{ url_for('index') }}" class="btn btn-outline-light mx-2"><i class="fa-solid fa-calculator me-2"></i>Hitung Profil Lain</a>
+        <a href="{{ url_for('leaderboard') }}" class="btn btn-outline-light mx-2"><i class="fa-solid fa-trophy me-2"></i>Lihat Leaderboard</a>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // === BAGIAN BARU UNTUK MENYIMPAN URL ===
+    {% if profile_summary and profile_summary.profile_url %}
+        localStorage.setItem('savedProfileUrl', '{{ profile_summary.profile_url }}');
+    {% endif %}
+    // === AKHIR BAGIAN BARU ===
+
+    // Grafik Donut Poin Event
+    var donutOptions = {
+        series: {{ arcade_summary.chart_points|tojson }},
+        chart: { type: 'donut', height: '100%', foreColor: '#adb5bd' },
+        labels: ['Arcade', 'Trivia', 'Skill', 'EkstraSkill'],
+        colors: ['#00E396', '#008FFB', '#6c757d', '#FFC107'],
+        dataLabels: { enabled: false },
+        plotOptions: {
+            pie: {
+                expandOnClick: false,
+                donut: {
+                    size: '75%',
+                    labels: {
+                        show: true,
+                        total: {
+                            show: true,
+                            label: 'Total Poin Event',
+                            color: '#adb5bd',
+                            fontSize: '16px',
+                            fontWeight: 400,
+                            formatter: function (w) {
+                                const total = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
+                                return parseFloat(total).toFixed(1);
+                            }
+                        },
+                        value: {
+                            show: true,
+                            fontSize: '28px',
+                            fontWeight: 'bold',
+                            color: '#ffffff',
+                            offsetY: 8
+                        },
+                    }
+                }
+            }
+        },
+        legend: { position: 'bottom', fontFamily: 'Poppins, sans-serif' },
+        tooltip: { theme: 'dark', y: { formatter: (val) => `${val} poin` } },
+        stroke: { width: 0 }
+    };
+    new ApexCharts(document.querySelector("#pointsChart"), donutOptions).render();
+
+    // Grafik Aktivitas Harian
+    var dailyActivityData = {{ daily_activity|tojson }};
+    if (dailyActivityData && dailyActivityData.length > 0) {
+        var dailyOptions = {
+            series: [{ name: 'Badge Diperoleh', data: dailyActivityData }],
+            chart: { type: 'bar', height: '100%', foreColor: '#adb5bd', toolbar: { show: false } },
+            plotOptions: { bar: { horizontal: false, columnWidth: '60%', borderRadius: 4 } },
+            dataLabels: { enabled: false },
+            xaxis: { type: 'datetime', labels: { datetimeUTC: false, format: 'dd MMM' } },
+            yaxis: { title: { text: 'Jumlah Badge' }, labels: { formatter: (val) => parseInt(val) } },
+            colors: ['#007bff'],
+            tooltip: { theme: 'dark', x: { format: 'dd MMMM yyyy' }, y: { formatter: (val) => `${val} badge` } },
+            grid: { borderColor: 'rgba(255,255,255,0.1)' }
+        };
+        new ApexCharts(document.querySelector("#dailyActivityChart"), dailyOptions).render();
+    } else {
+        document.querySelector("#dailyActivityChart").innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 text-white-50"><i class="fa-solid fa-chart-simple me-2"></i>Tidak ada aktivitas untuk ditampilkan.</div>';
+    }
+});
+</script>
+{% endblock %}
