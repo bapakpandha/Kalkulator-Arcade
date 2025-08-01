@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="d-flex justify-content-center mb-4">
+    <a href="{{ url_for('index') }}" class="btn btn-outline-light mx-2"><i class="fa-solid fa-calculator me-2"></i>Kalkulator</a>
+    <a href="{{ url_for('leaderboard') }}" class="btn btn-outline-light mx-2"><i class="fa-solid fa-trophy me-2"></i>Leaderboard</a>
+    <a href="{{ url_for('skill_badges') }}" class="btn btn-primary mx-2"><i class="fa-solid fa-award me-2"></i>Skill Badges</a>
+</nav>
+
+<div class="leaderboard-header">
+    <h1>Daftar Skill Badge</h1>
+    <p>Semua skill badge yang bisa anda kerjakan.</p>
+</div>
+
+<div class="card glass-card">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-borderless table-hover mb-0 align-middle">
+                <thead>
+                    <tr>
+                        <th style="width: 1%;">No</th>
+                        <th>Nama Badge</th>
+                        <th class="text-center">Level</th>
+                        <th class="text-center">Cost</th>
+                        <th>Keyword</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for badge in badges %}
+                    <tr>
+                        <td class="text-center">{{ loop.index }}</td>
+                        <td>
+                            <a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer" class="text-white fw-bold text-decoration-none">
+                                {{ badge.name }} <i class="fa-solid fa-external-link-alt fa-xs ms-1"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            {% if badge.level == 'Intermediate' %}
+                                <span class="badge text-bg-warning">{{ badge.level }}</span>
+                            {% else %}
+                                <span class="badge text-bg-info">{{ badge.level }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            <span class="badge text-bg-secondary">{{ badge.cost }}</span>
+                        </td>
+                        <td>
+                            <small class="text-white-50">{{ badge.keyword }}</small>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
