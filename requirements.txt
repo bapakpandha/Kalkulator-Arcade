@@ -5,3 +5,4 @@ python-dateutil==2.9.0
 bootstrap-flask==2.4.0
 mysql-connector-python==8.4.0
 python-dotenv==1.0.1
+maxminddb==2.5.0
