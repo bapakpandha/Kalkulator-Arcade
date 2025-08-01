@@ -1,4 +1,5 @@
 import re
+import json
 import requests
 from bs4 import BeautifulSoup
 from dateutil import parser as dt
@@ -7,21 +8,22 @@ from typing import List, Tuple, Dict, Any
 
 START_DATE = datetime(2025, 7, 15, tzinfo=timezone.utc)
 Badge = Tuple[str, str, datetime]
-COURSE_BADGE = {
-    "Work with Gemini Models in BigQuery", "Responsible AI for Developers: Privacy & Safety",
-    "Advanced ML: ML Infrastructure", "Intermediate ML: TensorFlow on Google Cloud",
-    "Workspace: Add-ons", "Modernizing Retail and Ecommerce Solutions with Google Cloud",
-    "Machine Learning in the Enterprise", "Google Developer Essentials",
-    "Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud",
-    "Gemini for Data Scientists and Analysts", "Boost Productivity with Gemini in BigQuery",
-    "Achieving Advanced Insights with BigQuery",
-    "Machine Learning Operations (MLOps) for Generative AI",
-    "Machine Learning Operations (MLOps) with Vertex AI: Model Evaluation",
-}
-EXCLUDED_COURSE = {" ".join(course.lower().split()) for course in COURSE_BADGE}
+
+def load_valid_skill_badges():
+    try:
+        with open('skill.json', 'r', encoding='utf-8') as f:
+            badges = json.load(f)
+        return {" ".join(badge['name'].lower().split()) for badge in badges}
+    except FileNotFoundError:
+        print("Skill.json not found")
+        return set()
+    except json.JSONDecodeError:
+        print("Skill.json not found")
+        return set()
+
+VALID_SKILL_BADGES = load_valid_skill_badges()
 
 def fetch_data(profile_url: str) -> Dict[str, Any]:
-    """Mengambil data profil lengkap termasuk info profil, liga, dan badge event."""
     resp = requests.get(profile_url, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
@@ -29,7 +31,7 @@ def fetch_data(profile_url: str) -> Dict[str, Any]:
     name_tag = soup.select_one("h1.ql-display-small")
     member_since_tag = soup.select_one("p.ql-body-large.l-mbl")
     avatar_tag = soup.select_one("ql-avatar.profile-avatar")
-    
+
     league_container = soup.select_one("div.profile-league")
     league_name = "N/A"
     league_points = 0
@@ -54,12 +56,13 @@ def fetch_data(profile_url: str) -> Dict[str, Any]:
         "photo_url": avatar_tag['src'] if avatar_tag and avatar_tag.has_attr('src') else None,
         "league_name": league_name,
         "league_points": league_points,
-        "league_icon_url": league_icon_url
+        "league_icon_url": league_icon_url,
+        "profile_url": profile_url
     }
 
     cards = soup.select("div.profile-badge")
     dialogs = {dlg["id"]: dlg for dlg in soup.select("ql-dialog[id]")}
-    
+
     event_badges: List[Badge] = []
     for card in cards:
         title_el = card.select_one("span.ql-title-medium")
@@ -69,9 +72,6 @@ def fetch_data(profile_url: str) -> Dict[str, Any]:
             continue
 
         badge_name = title_el.get_text(strip=True)
-        normalized_name = " ".join(badge_name.lower().split())
-        if normalized_name in EXCLUDED_COURSE:
-            continue
 
         m = re.search(r"([A-Za-z]{3}\s+\d{1,2},\s+\d{4})", date_el.get_text())
         if not m:
@@ -81,10 +81,15 @@ def fetch_data(profile_url: str) -> Dict[str, Any]:
             continue
 
         nl = badge_name.lower()
+        normalized_name = " ".join(nl.split())
         tipe = None
-        if "extra" in nl: tipe = "extra"
-        elif "trivia" in nl: tipe = "trivia"
-        elif "level" in nl: tipe = "arcade"
+
+        if "extra" in nl:
+            tipe = "extra"
+        elif "trivia" in nl:
+            tipe = "trivia"
+        elif "level" in nl:
+            tipe = "arcade"
 
         modal_button = card.select_one("ql-button[modal]")
         modal_id = modal_button["modal"] if modal_button else None
@@ -96,7 +101,12 @@ def fetch_data(profile_url: str) -> Dict[str, Any]:
                 hl = (dlg.get("headline", "") or "").lower() if dlg else ""
                 tipe = "trivia" if "trivia" in nl or "trivia" in hl else "arcade"
 
-        if not tipe: tipe = "skill"
+        if not tipe:
+            if normalized_name in VALID_SKILL_BADGES:
+                tipe = "skill"
+            else:
+                continue
+
         event_badges.append((badge_name, tipe, date_obj))
 
     profile_summary['event_badges'] = sorted(event_badges, key=lambda item: item[2], reverse=True)
