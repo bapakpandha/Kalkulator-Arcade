@@ -1,0 +1,653 @@
+[
+  {
+    "name": "Analyze and Reason on Multimodal Data with Gemini",
+    "url": "https://www.cloudskillsboost.google/course_templates/1240",
+    "level": "Intermediate",
+    "cost": "10 Credits",
+    "keyword": "Vertex AI, Gemini, Data Analysis"
+  },
+  {
+    "name": "Analyze BigQuery Data in Connected Sheets",
+    "url": "https://www.cloudskillsboost.google/course_templates/632",
+    "level": "Introductory",
+    "cost": "No Cost",
+    "keyword": "BigQuery, Google Sheets, Data Sharing"
+  },
+  {
+    "name": "Analyze Images with the Cloud Vision API",
+    "url": "https://www.cloudskillsboost.google/course_templates/633",
+    "level": "Introductory",
+    "cost": "12 Credits",
+    "keyword": "Cloud Vision API, Image Processing"
+  },
+  {
+    "name": "Analyze Sentiment with Natural Language API",
+    "url": "https://www.cloudskillsboost.google/course_templates/667",
+    "level": "Introductory",
+    "cost": "12 Credits",
+    "keyword": "Natural Language API, Sentiment Analysis"
+  },
+  {
+    "name": "Analyze Speech and Language with Google APIs",
+    "url": "https://www.cloudskillsboost.google/course_templates/634",
+    "level": "Introductory",
+    "cost": "8 Credits",
+    "keyword": "Speech-to-Text API, Natural Language API"
+  },
+  {
+    "name": "App Building with AppSheet",
+    "url": "https://www.cloudskillsboost.google/course_templates/635",
+    "level": "Introductory",
+    "cost": "No Cost",
+    "keyword": "AppSheet, No-code Development"
+  },
+  {
+    "name": "App Engine: 3 Ways",
+    "url": "https://www.cloudskillsboost.google/course_templates/671",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "App Engine, Python, Go, PHP"
+  },
+  {
+    "name": "Automate Data Capture at Scale with Document AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/674",
+    "level": "Introductory",
+    "cost": "8 Credits",
+    "keyword": "Document AI, Data Extraction"
+  },
+  {
+    "name": "Build a Data Mesh with Dataplex",
+    "url": "https://www.cloudskillsboost.google/course_templates/681",
+    "level": "Introductory",
+    "cost": "5 Credits",
+    "keyword": "Dataplex, Data Quality, IAM"
+  },
+  {
+    "name": "Build a Data Warehouse with BigQuery",
+    "url": "https://www.cloudskillsboost.google/course_templates/624",
+    "level": "Intermediate",
+    "cost": "25 Credits",
+    "keyword": "BigQuery, Data Warehouse, SQL"
+  },
+  {
+    "name": "Build a Secure Google Cloud Network",
+    "url": "https://www.cloudskillsboost.google/course_templates/654",
+    "level": "Intermediate",
+    "cost": "30 Credits",
+    "keyword": "Cloud Networking, VPC, Cloud Armor"
+  },
+  {
+    "name": "Build a Website on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/638",
+    "level": "Introductory",
+    "cost": "13 Credits",
+    "keyword": "Cloud Run, Compute Engine, GKE"
+  },
+  {
+    "name": "Build and Deploy Machine Learning Solutions on Vertex AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/684",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "Vertex AI, AutoML, BigQuery ML"
+  },
+  {
+    "name": "Build Custom Processors with Document AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/686",
+    "level": "Intermediate",
+    "cost": "30 Credits",
+    "keyword": "Document AI, Machine Learning"
+  },
+  {
+    "name": "Build Google Cloud Infrastructure for AWS Professionals",
+    "url": "https://www.cloudskillsboost.google/course_templates/687",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "IAM, GKE, Compute Engine, Load Balancing"
+  },
+  {
+    "name": "Build Google Cloud Infrastructure for Azure Professionals",
+    "url": "https://www.cloudskillsboost.google/course_templates/688",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "IAM, GKE, Compute Engine, Load Balancing"
+  },
+  {
+    "name": "Build Infrastructure with Terraform on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/636",
+    "level": "Intermediate",
+    "cost": "12 Credits",
+    "keyword": "Terraform, Infrastructure as Code"
+  },
+  {
+    "name": "Build LookML Objects in Looker",
+    "url": "https://www.cloudskillsboost.google/course_templates/639",
+    "level": "Introductory",
+    "cost": "No Cost",
+    "keyword": "Looker, LookML, Data Engineering"
+  },
+  {
+    "name": "Build Real World AI Applications with Gemini and Imagen",
+    "url": "https://www.cloudskillsboost.google/course_templates/1076",
+    "level": "Introductory",
+    "cost": "No Cost",
+    "keyword": "Vertex AI, Gemini, Imagen"
+  },
+  {
+    "name": "Classify Images with TensorFlow on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/646",
+    "level": "Intermediate",
+    "cost": "26 Credits",
+    "keyword": "TensorFlow, Vertex AI, Computer Vision"
+  },
+  {
+    "name": "Cloud Architecture: Design, Implement, and Manage",
+    "url": "https://www.cloudskillsboost.google/course_templates/640",
+    "level": "Intermediate",
+    "cost": "32 Credits",
+    "keyword": "Compute Engine, Kubernetes, Docker, Cloud SQL"
+  },
+  {
+    "name": "Cloud Run Functions: 3 Ways",
+    "url": "https://www.cloudskillsboost.google/course_templates/696",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "Cloud Run, Cloud Deploy"
+  },
+  {
+    "name": "Cloud Speech API: 3 Ways",
+    "url": "https://www.cloudskillsboost.google/course_templates/700",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "Text-to-Speech API, Translation API, Speech API"
+  },
+  {
+    "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/702",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "IAM, gcloud, Service Accounts"
+  },
+  {
+    "name": "Create a Secure Data Lake on Cloud Storage",
+    "url": "https://www.cloudskillsboost.google/course_templates/704",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "Cloud Storage, IAM, Dataplex"
+  },
+  {
+    "name": "Create a Streaming Data Lake on Cloud Storage",
+    "url": "https://www.cloudskillsboost.google/course_templates/705",
+    "level": "Introductory",
+    "cost": "3 Credits",
+    "keyword": "Pub/Sub, Dataflow, Cloud Storage"
+  },
+  {
+    "name": "Create and Manage AlloyDB Instances",
+    "url": "https://www.cloudskillsboost.google/course_templates/642",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "AlloyDB, SQL, Data Management"
+  },
+  {
+    "name": "Create and Manage Bigtable Instances",
+    "url": "https://www.cloudskillsboost.google/course_templates/650",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "Bigtable, NoSQL, Database Administration"
+  },
+  {
+    "name": "Create and Manage Cloud Spanner Instances",
+    "url": "https://www.cloudskillsboost.google/course_templates/643",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "Cloud Spanner, Databases"
+  },
+  {
+    "name": "Create and Manage Cloud SQL for PostgreSQL Instances",
+    "url": "https://www.cloudskillsboost.google/course_templates/652",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "Cloud SQL, PostgreSQL, Data Migration"
+  },
+  {
+    "name": "Create ML Models with BigQuery ML",
+    "url": "https://www.cloudskillsboost.google/course_templates/626",
+    "level": "Intermediate",
+    "cost": "5 Credits",
+    "keyword": "BigQuery ML, Data Analysis"
+  },
+  {
+    "name": "Deploy and Manage Apigee X",
+    "url": "https://www.cloudskillsboost.google/course_templates/661",
+    "level": "Introductory",
+    "cost": "9 Credits",
+    "keyword": "Apigee X, Cloud Armor, API Management"
+  },
+  {
+    "name": "Deploy Kubernetes Applications on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/663",
+    "level": "Intermediate",
+    "cost": "12 Credits",
+    "keyword": "Kubernetes, GKE, Docker, kubectl"
+  },
+  {
+    "name": "Derive Insights from BigQuery Data",
+    "url": "https://www.cloudskillsboost.google/course_templates/623",
+    "level": "Introductory",
+    "cost": "6 Credits",
+    "keyword": "BigQuery, SQL, Looker Studio"
+  },
+  {
+    "name": "Detect Manufacturing Defects using Visual Inspection AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/644",
+    "level": "Intermediate",
+    "cost": "25 Credits",
+    "keyword": "Visual Inspection AI, Vertex AI"
+  },
+  {
+    "name": "Develop and Secure APIs with Apigee X",
+    "url": "https://www.cloudskillsboost.google/course_templates/714",
+    "level": "Intermediate",
+    "cost": "26 Credits",
+    "keyword": "Apigee X, API Development, Cloud Run"
+  },
+  {
+    "name": "Develop GenAI Apps with Gemini and Streamlit",
+    "url": "https://www.cloudskillsboost.google/course_templates/978",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "Gemini, Streamlit, Cloud Run, Vertex AI"
+  },
+  {
+    "name": "Develop Serverless Applications on Cloud Run",
+    "url": "https://www.cloudskillsboost.google/course_templates/741",
+    "level": "Intermediate",
+    "cost": "25 Credits",
+    "keyword": "Cloud Run, Pub/Sub, Serverless"
+  },
+  {
+    "name": "Develop Serverless Apps with Firebase",
+    "url": "https://www.cloudskillsboost.google/course_templates/649",
+    "level": "Intermediate",
+    "cost": "16 Credits",
+    "keyword": "Firebase, Firestore, Cloud Build"
+  },
+  {
+    "name": "Develop with Apps Script and AppSheet",
+    "url": "https://www.cloudskillsboost.google/course_templates/715",
+    "level": "Introductory",
+    "cost": "7 Credits",
+    "keyword": "AppSheet, Apps Script, Google Chat"
+  },
+  {
+    "name": "Develop your Google Cloud Network",
+    "url": "https://www.cloudskillsboost.google/course_templates/625",
+    "level": "Intermediate",
+    "cost": "18 Credits",
+    "keyword": "VPC, IAM, BigQuery, GKE, Cloud Monitoring"
+  },
+  {
+    "name": "Discover and Protect Sensitive Data Across Your Ecosystem",
+    "url": "https://www.cloudskillsboost.google/course_templates/1177",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "Sensitive Data Protection, BigQuery, Cloud Storage"
+  },
+  {
+    "name": "Engineer Data for Predictive Modeling with BigQuery ML",
+    "url": "https://www.cloudskillsboost.google/course_templates/627",
+    "level": "Intermediate",
+    "cost": "15 Credits",
+    "keyword": "BigQuery ML, Dataprep, Dataflow"
+  },
+  {
+    "name": "Enhance Gemini Model Capabilities",
+    "url": "https://www.cloudskillsboost.google/course_templates/1241",
+    "level": "Intermediate",
+    "cost": "5 Credits",
+    "keyword": "Gemini, Vertex AI, API"
+  },
+  {
+    "name": "Explore Generative AI with the Gemini API in Vertex AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/959",
+    "level": "Intermediate",
+    "cost": "15 Credits",
+    "keyword": "Gemini, Vertex AI, Generative AI"
+  },
+  {
+    "name": "Get Started with API Gateway",
+    "url": "https://www.cloudskillsboost.google/course_templates/662",
+    "level": "Introductory",
+    "cost": "3 Credits",
+    "keyword": "API Gateway, Cloud Run, Pub/Sub"
+  },
+  {
+    "name": "Get Started with Cloud Storage",
+    "url": "https://www.cloudskillsboost.google/course_templates/725",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "Cloud Storage, APIs Explorer"
+  },
+  {
+    "name": "Get Started with Dataplex",
+    "url": "https://www.cloudskillsboost.google/course_templates/726",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "Dataplex, Data Integration"
+  },
+  {
+    "name": "Get Started with Eventarc",
+    "url": "https://www.cloudskillsboost.google/course_templates/727",
+    "level": "Introductory",
+    "cost": "3 Credits",
+    "keyword": "Eventarc, Pub/Sub, Cloud Run"
+  },
+  {
+    "name": "Get Started with Google Workspace Tools",
+    "url": "https://www.cloudskillsboost.google/course_templates/676",
+    "level": "Introductory",
+    "cost": "No Cost",
+    "keyword": "Gmail, Calendar, Drive, Sheets, AppSheet"
+  },
+  {
+    "name": "Get Started with Looker",
+    "url": "https://www.cloudskillsboost.google/course_templates/647",
+    "level": "Introductory",
+    "cost": "No Cost",
+    "keyword": "Looker, Looker Studio, BigQuery"
+  },
+  {
+    "name": "Get Started with Pub/Sub",
+    "url": "https://www.cloudskillsboost.google/course_templates/728",
+    "level": "Introductory",
+    "cost": "2 Credits",
+    "keyword": "Pub/Sub, Cloud Scheduler"
+  },
+  {
+    "name": "Get Started with Sensitive Data Protection",
+    "url": "https://www.cloudskillsboost.google/course_templates/750",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "Sensitive Data Protection, DLP API"
+  },
+  {
+    "name": "Implement CI/CD Pipelines on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/691",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "CI/CD, Cloud Build, GKE, Artifact Registry"
+  },
+  {
+    "name": "Implement Cloud Security Fundamentals on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/645",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "IAM, VPC Peering, KMS, IAP, GKE"
+  },
+  {
+    "name": "Implement DevOps Workflows in Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/716",
+    "level": "Intermediate",
+    "cost": "16 Credits",
+    "keyword": "GKE, Cloud Build, Git, Artifact Registry"
+  },
+  {
+    "name": "Implement Load Balancing on Compute Engine",
+    "url": "https://www.cloudskillsboost.google/course_templates/648",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "Load Balancing, Compute Engine"
+  },
+  {
+    "name": "Implement Multimodal Vector Search with BigQuery",
+    "url": "https://www.cloudskillsboost.google/course_templates/1232",
+    "level": "Intermediate",
+    "cost": "16 Credits",
+    "keyword": "BigQuery, Gemini, SQL, RAG"
+  },
+  {
+    "name": "Inspect Rich Documents with Gemini Multimodality and Multimodal RAG",
+    "url": "https://www.cloudskillsboost.google/course_templates/981",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "Gemini, RAG, Vertex AI"
+  },
+  {
+    "name": "Integrate BigQuery Data and Google Workspace using Apps Script",
+    "url": "https://www.cloudskillsboost.google/course_templates/737",
+    "level": "Introductory",
+    "cost": "2 Credits",
+    "keyword": "BigQuery, Apps Script, Google Sheets"
+  },
+  {
+    "name": "Manage Data Models in Looker",
+    "url": "https://www.cloudskillsboost.google/course_templates/651",
+    "level": "Intermediate",
+    "cost": "No Cost",
+    "keyword": "Looker, LookML"
+  },
+  {
+    "name": "Manage Kubernetes in Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/783",
+    "level": "Intermediate",
+    "cost": "20 Credits",
+    "keyword": "GKE, kubectl, Prometheus"
+  },
+  {
+    "name": "Migrate MySQL data to Cloud SQL using Database Migration Service",
+    "url": "https://www.cloudskillsboost.google/course_templates/629",
+    "level": "Introductory",
+    "cost": "5 Credits",
+    "keyword": "Cloud SQL, MySQL, Database Migration Service"
+  },
+  {
+    "name": "Mitigate Threats and Vulnerabilities with Security Command Center",
+    "url": "https://www.cloudskillsboost.google/course_templates/759",
+    "level": "Intermediate",
+    "cost": "5 Credits",
+    "keyword": "Security Command Center, Web Security Scanner"
+  },
+  {
+    "name": "Monitor and Log with Google Cloud Observability",
+    "url": "https://www.cloudskillsboost.google/course_templates/749",
+    "level": "Introductory",
+    "cost": "9 Credits",
+    "keyword": "Cloud Monitoring, Cloud Logging"
+  },
+  {
+    "name": "Monitor and Manage Google Cloud Resources",
+    "url": "https://www.cloudskillsboost.google/course_templates/653",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "IAM, Cloud Monitoring, Cloud Run"
+  },
+  {
+    "name": "Monitor Environments with Google Cloud Managed Service for Prometheus",
+    "url": "https://www.cloudskillsboost.google/course_templates/761",
+    "level": "Introductory",
+    "cost": "13 Credits",
+    "keyword": "Prometheus, Kubernetes, GKE, Monitoring"
+  },
+  {
+    "name": "Networking Fundamentals on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/748",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "VPC, Load Balancing, Cloud Networking"
+  },
+  {
+    "name": "Optimize Costs for Google Kubernetes Engine",
+    "url": "https://www.cloudskillsboost.google/course_templates/655",
+    "level": "Intermediate",
+    "cost": "25 Credits",
+    "keyword": "GKE, Autoscaling, Cost Optimization"
+  },
+  {
+    "name": "Perform Foundational Infrastructure Tasks in Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/637",
+    "level": "Introductory",
+    "cost": "8 Credits",
+    "keyword": "Cloud Storage, IAM, Cloud Run, Pub/Sub"
+  },
+  {
+    "name": "Perform Predictive Data Analysis in BigQuery",
+    "url": "https://www.cloudskillsboost.google/course_templates/656",
+    "level": "Intermediate",
+    "cost": "32 Credits",
+    "keyword": "BigQuery, BigQuery ML, Data Analysis"
+  },
+  {
+    "name": "Prepare Data for Looker Dashboards and Reports",
+    "url": "https://www.cloudskillsboost.google/course_templates/628",
+    "level": "Introductory",
+    "cost": "No Cost",
+    "keyword": "Looker, Data Preparation"
+  },
+  {
+    "name": "Prepare Data for ML APIs on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/631",
+    "level": "Introductory",
+    "cost": "13 Credits",
+    "keyword": "Dataprep, Dataflow, Dataproc, ML APIs"
+  },
+  {
+    "name": "Protect Cloud Traffic with Chrome Enterprise Premium Security",
+    "url": "https://www.cloudskillsboost.google/course_templates/784",
+    "level": "Intermediate",
+    "cost": "16 Credits",
+    "keyword": "Identity-Aware Proxy (IAP), Zero-Trust"
+  },
+  {
+    "name": "Prompt Design in Vertex AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/976",
+    "level": "Introductory",
+    "cost": "No Cost",
+    "keyword": "Vertex AI, Prompt Engineering, Gemini"
+  },
+  {
+    "name": "Secure BigLake Data",
+    "url": "https://www.cloudskillsboost.google/course_templates/751",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "BigLake, BigQuery, Data Catalog, IAM"
+  },
+  {
+    "name": "Secure Software Delivery",
+    "url": "https://www.cloudskillsboost.google/course_templates/1164",
+    "level": "Intermediate",
+    "cost": "16 Credits",
+    "keyword": "GKE, Cloud Build, Artifact Registry, CI/CD"
+  },
+  {
+    "name": "Set Up a Google Cloud Network",
+    "url": "https://www.cloudskillsboost.google/course_templates/641",
+    "level": "Introductory",
+    "cost": "8 Credits",
+    "keyword": "VPC, Firewall Rules, Compute Engine"
+  },
+  {
+    "name": "Share Data using Google Data Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/657",
+    "level": "Introductory",
+    "cost": "9 Credits",
+    "keyword": "BigQuery, Data Sharing, Looker Studio"
+  },
+  {
+    "name": "Store, Process, and Manage Data on Google Cloud - Command Line",
+    "url": "https://www.cloudskillsboost.google/course_templates/659",
+    "level": "Introductory",
+    "cost": "3 Credits",
+    "keyword": "Cloud Storage, Cloud Run, Pub/Sub, CLI"
+  },
+  {
+    "name": "Store, Process, and Manage Data on Google Cloud - Console",
+    "url": "https://www.cloudskillsboost.google/course_templates/658",
+    "level": "Introductory",
+    "cost": "3 Credits",
+    "keyword": "Cloud Storage, Cloud Run, Pub/Sub, Console"
+  },
+  {
+    "name": "Streaming Analytics into BigQuery",
+    "url": "https://www.cloudskillsboost.google/course_templates/752",
+    "level": "Introductory",
+    "cost": "2 Credits",
+    "keyword": "Pub/Sub, Dataflow, BigQuery"
+  },
+  {
+    "name": "Tag and Discover BigLake Data",
+    "url": "https://www.cloudskillsboost.google/course_templates/753",
+    "level": "Introductory",
+    "cost": "3 Credits",
+    "keyword": "BigLake, BigQuery, Data Catalog, Dataplex"
+  },
+  {
+    "name": "The Basics of Google Cloud Compute",
+    "url": "https://www.cloudskillsboost.google/course_templates/754",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "Compute Engine, Persistent Disk"
+  },
+  {
+    "name": "Use APIs to Work with Cloud Storage",
+    "url": "https://www.cloudskillsboost.google/course_templates/755",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "Cloud Storage, REST API"
+  },
+  {
+    "name": "Use Functions, Formulas, and Charts in Google Sheets",
+    "url": "https://www.cloudskillsboost.google/course_templates/776",
+    "level": "Intermediate",
+    "cost": "No Cost",
+    "keyword": "Google Sheets, Formulas, Charts"
+  },
+  {
+    "name": "Use Machine Learning APIs on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/630",
+    "level": "Intermediate",
+    "cost": "31 Credits",
+    "keyword": "Vision API, Translation API, Natural Language API"
+  },
+  {
+    "name": "Using the Google Cloud Speech API",
+    "url": "https://www.cloudskillsboost.google/course_templates/756",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "Speech-to-Text API, Speech Recognition"
+  },
+  {
+    "name": "Privileged Access with IAM",
+    "url": "https://www.cloudskillsboost.google/course_templates/1337",
+    "level": "Intermediate",
+    "cost": "4 Credits",
+    "keyword": "Privileged Access Manager, App Engine, Custom Roles"
+  },
+  {
+    "name": "Implementing Cloud Load Balancing for Compute Engine",
+    "url": "https://www.cloudskillsboost.google/course_templates/648",
+    "level": "Introductory",
+    "cost": "1 Credit",
+    "keyword": "Cloud Load Balancing, Load Blancing, Compute Engine"
+  },
+  {
+    "name": "Monitoring in Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/747",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "Monitoring, Google Cloud, Cloud Monitoring"
+  },
+  {
+    "name": "Set Up an App Dev Environment on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/paths/8/course_templates/637",
+    "level": "Introductory",
+    "cost": "4 Credits",
+    "keyword": "App Environment, Cloud Functions, Cloud Storage"
+  },
+  {
+    "name": "Share Data Using Google Data Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/657",
+    "level": "Introductory",
+    "cost": "9 Credits",
+    "keyword": "Data Analytics, Analytics, Google Cloud"
+  }
+]
