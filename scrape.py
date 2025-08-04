@@ -12,8 +12,7 @@ Badge = Tuple[str, str, datetime]
 def load_valid_skill_badges():
     try:
         with open('skill.json', 'r', encoding='utf-8') as f:
-            badges = json.load(f)
-        return {" ".join(badge['name'].lower().split()) for badge in badges}
+            return json.load(f)
     except FileNotFoundError:
         print("Skill.json not found")
         return set()
@@ -21,7 +20,7 @@ def load_valid_skill_badges():
         print("Skill.json not found")
         return set()
 
-VALID_SKILL_BADGES = load_valid_skill_badges()
+VALID_SKILL_BADGES = {" ".join(badge['name'].lower().split()) for badge in load_valid_skill_badges() }
 
 def fetch_data(profile_url: str) -> Dict[str, Any]:
     resp = requests.get(profile_url, timeout=30)

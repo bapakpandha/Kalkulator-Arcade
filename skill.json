@@ -4,650 +4,836 @@
     "url": "https://www.cloudskillsboost.google/course_templates/1240",
     "level": "Intermediate",
     "cost": "10 Credits",
-    "keyword": "Vertex AI, Gemini, Data Analysis"
+    "keyword": "Vertex AI, Gemini, Data Analysis",
+    "duration": "5 jam 30 menit",
+    "labs_count": "6"
   },
   {
     "name": "Analyze BigQuery Data in Connected Sheets",
     "url": "https://www.cloudskillsboost.google/course_templates/632",
     "level": "Introductory",
     "cost": "No Cost",
-    "keyword": "BigQuery, Google Sheets, Data Sharing"
+    "keyword": "BigQuery, Google Sheets, Data Sharing",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Analyze Images with the Cloud Vision API",
     "url": "https://www.cloudskillsboost.google/course_templates/633",
     "level": "Introductory",
     "cost": "12 Credits",
-    "keyword": "Cloud Vision API, Image Processing"
+    "keyword": "Cloud Vision API, Image Processing",
+    "duration": "3 jam",
+    "labs_count": "4"
   },
   {
     "name": "Analyze Sentiment with Natural Language API",
     "url": "https://www.cloudskillsboost.google/course_templates/667",
     "level": "Introductory",
     "cost": "12 Credits",
-    "keyword": "Natural Language API, Sentiment Analysis"
+    "keyword": "Natural Language API, Sentiment Analysis",
+    "duration": "3 jam",
+    "labs_count": "4"
   },
   {
     "name": "Analyze Speech and Language with Google APIs",
     "url": "https://www.cloudskillsboost.google/course_templates/634",
     "level": "Introductory",
     "cost": "8 Credits",
-    "keyword": "Speech-to-Text API, Natural Language API"
+    "keyword": "Speech-to-Text API, Natural Language API",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "App Building with AppSheet",
     "url": "https://www.cloudskillsboost.google/course_templates/635",
     "level": "Introductory",
     "cost": "No Cost",
-    "keyword": "AppSheet, No-code Development"
+    "keyword": "AppSheet, No-code Development",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "App Engine: 3 Ways",
     "url": "https://www.cloudskillsboost.google/course_templates/671",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "App Engine, Python, Go, PHP"
+    "keyword": "App Engine, Python, Go, PHP",
+    "duration": "2 jam 15 menit",
+    "labs_count": "4"
   },
   {
     "name": "Automate Data Capture at Scale with Document AI",
     "url": "https://www.cloudskillsboost.google/course_templates/674",
     "level": "Introductory",
     "cost": "8 Credits",
-    "keyword": "Document AI, Data Extraction"
+    "keyword": "Document AI, Data Extraction",
+    "duration": "3 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Build a Data Mesh with Dataplex",
     "url": "https://www.cloudskillsboost.google/course_templates/681",
     "level": "Introductory",
     "cost": "5 Credits",
-    "keyword": "Dataplex, Data Quality, IAM"
+    "keyword": "Dataplex, Data Quality, IAM",
+    "duration": "5 jam 30 menit",
+    "labs_count": "5"
   },
   {
     "name": "Build a Data Warehouse with BigQuery",
     "url": "https://www.cloudskillsboost.google/course_templates/624",
     "level": "Intermediate",
     "cost": "25 Credits",
-    "keyword": "BigQuery, Data Warehouse, SQL"
+    "keyword": "BigQuery, Data Warehouse, SQL",
+    "duration": "5 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Build a Secure Google Cloud Network",
     "url": "https://www.cloudskillsboost.google/course_templates/654",
     "level": "Intermediate",
     "cost": "30 Credits",
-    "keyword": "Cloud Networking, VPC, Cloud Armor"
+    "keyword": "Cloud Networking, VPC, Cloud Armor",
+    "duration": "6 jam 45 menit",
+    "labs_count": "6"
   },
   {
     "name": "Build a Website on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/638",
     "level": "Introductory",
     "cost": "13 Credits",
-    "keyword": "Cloud Run, Compute Engine, GKE"
+    "keyword": "Cloud Run, Compute Engine, GKE",
+    "duration": "5 jam 30 menit",
+    "labs_count": "5"
   },
   {
     "name": "Build and Deploy Machine Learning Solutions on Vertex AI",
     "url": "https://www.cloudskillsboost.google/course_templates/684",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "Vertex AI, AutoML, BigQuery ML"
+    "keyword": "Vertex AI, AutoML, BigQuery ML",
+    "duration": "7 jam",
+    "labs_count": "4"
   },
   {
     "name": "Build Custom Processors with Document AI",
     "url": "https://www.cloudskillsboost.google/course_templates/686",
     "level": "Intermediate",
     "cost": "30 Credits",
-    "keyword": "Document AI, Machine Learning"
+    "keyword": "Document AI, Machine Learning",
+    "duration": "6 jam 15 menit",
+    "labs_count": "6"
   },
   {
     "name": "Build Google Cloud Infrastructure for AWS Professionals",
     "url": "https://www.cloudskillsboost.google/course_templates/687",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "IAM, GKE, Compute Engine, Load Balancing"
+    "keyword": "IAM, GKE, Compute Engine, Load Balancing",
+    "duration": "5 jam",
+    "labs_count": "4"
   },
   {
     "name": "Build Google Cloud Infrastructure for Azure Professionals",
     "url": "https://www.cloudskillsboost.google/course_templates/688",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "IAM, GKE, Compute Engine, Load Balancing"
+    "keyword": "IAM, GKE, Compute Engine, Load Balancing",
+    "duration": "4 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Build Infrastructure with Terraform on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/636",
     "level": "Intermediate",
     "cost": "12 Credits",
-    "keyword": "Terraform, Infrastructure as Code"
+    "keyword": "Terraform, Infrastructure as Code",
+    "duration": "5 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Build LookML Objects in Looker",
     "url": "https://www.cloudskillsboost.google/course_templates/639",
     "level": "Introductory",
     "cost": "No Cost",
-    "keyword": "Looker, LookML, Data Engineering"
+    "keyword": "Looker, LookML, Data Engineering",
+    "duration": "5 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Build Real World AI Applications with Gemini and Imagen",
     "url": "https://www.cloudskillsboost.google/course_templates/1076",
     "level": "Introductory",
     "cost": "No Cost",
-    "keyword": "Vertex AI, Gemini, Imagen"
+    "keyword": "Vertex AI, Gemini, Imagen",
+    "duration": "1 jam 15 menit",
+    "labs_count": "4"
   },
   {
     "name": "Classify Images with TensorFlow on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/646",
     "level": "Intermediate",
     "cost": "26 Credits",
-    "keyword": "TensorFlow, Vertex AI, Computer Vision"
+    "keyword": "TensorFlow, Vertex AI, Computer Vision",
+    "duration": "7 jam 15 menit",
+    "labs_count": "6"
   },
   {
     "name": "Cloud Architecture: Design, Implement, and Manage",
     "url": "https://www.cloudskillsboost.google/course_templates/640",
     "level": "Intermediate",
     "cost": "32 Credits",
-    "keyword": "Compute Engine, Kubernetes, Docker, Cloud SQL"
+    "keyword": "Compute Engine, Kubernetes, Docker, Cloud SQL",
+    "duration": "6 jam 30 menit",
+    "labs_count": "6"
   },
   {
     "name": "Cloud Run Functions: 3 Ways",
     "url": "https://www.cloudskillsboost.google/course_templates/696",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "Cloud Run, Cloud Deploy"
+    "keyword": "Cloud Run, Cloud Deploy",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Cloud Speech API: 3 Ways",
     "url": "https://www.cloudskillsboost.google/course_templates/700",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "Text-to-Speech API, Translation API, Speech API"
+    "keyword": "Text-to-Speech API, Translation API, Speech API",
+    "duration": "1 jam",
+    "labs_count": "4"
   },
   {
     "name": "Configure Service Accounts and IAM Roles for Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/702",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "IAM, gcloud, Service Accounts"
+    "keyword": "IAM, gcloud, Service Accounts",
+    "duration": "1 jam",
+    "labs_count": "4"
   },
   {
     "name": "Create a Secure Data Lake on Cloud Storage",
     "url": "https://www.cloudskillsboost.google/course_templates/704",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "Cloud Storage, IAM, Dataplex"
+    "keyword": "Cloud Storage, IAM, Dataplex",
+    "duration": "1 jam",
+    "labs_count": "4"
   },
   {
     "name": "Create a Streaming Data Lake on Cloud Storage",
     "url": "https://www.cloudskillsboost.google/course_templates/705",
     "level": "Introductory",
     "cost": "3 Credits",
-    "keyword": "Pub/Sub, Dataflow, Cloud Storage"
+    "keyword": "Pub/Sub, Dataflow, Cloud Storage",
+    "duration": "2 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Create and Manage AlloyDB Instances",
     "url": "https://www.cloudskillsboost.google/course_templates/642",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "AlloyDB, SQL, Data Management"
+    "keyword": "AlloyDB, SQL, Data Management",
+    "duration": "1 jam 45 menit",
+    "labs_count": "6"
   },
   {
     "name": "Create and Manage Bigtable Instances",
     "url": "https://www.cloudskillsboost.google/course_templates/650",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "Bigtable, NoSQL, Database Administration"
+    "keyword": "Bigtable, NoSQL, Database Administration",
+    "duration": "1 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Create and Manage Cloud Spanner Instances",
     "url": "https://www.cloudskillsboost.google/course_templates/643",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "Cloud Spanner, Databases"
+    "keyword": "Cloud Spanner, Databases",
+    "duration": "1 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Create and Manage Cloud SQL for PostgreSQL Instances",
     "url": "https://www.cloudskillsboost.google/course_templates/652",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "Cloud SQL, PostgreSQL, Data Migration"
+    "keyword": "Cloud SQL, PostgreSQL, Data Migration",
+    "duration": "1 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Create ML Models with BigQuery ML",
     "url": "https://www.cloudskillsboost.google/course_templates/626",
     "level": "Intermediate",
     "cost": "5 Credits",
-    "keyword": "BigQuery ML, Data Analysis"
+    "keyword": "BigQuery ML, Data Analysis",
+    "duration": "1 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Deploy and Manage Apigee X",
     "url": "https://www.cloudskillsboost.google/course_templates/661",
     "level": "Introductory",
     "cost": "9 Credits",
-    "keyword": "Apigee X, Cloud Armor, API Management"
+    "keyword": "Apigee X, Cloud Armor, API Management",
+    "duration": "8 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Deploy Kubernetes Applications on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/663",
     "level": "Intermediate",
     "cost": "12 Credits",
-    "keyword": "Kubernetes, GKE, Docker, kubectl"
+    "keyword": "Kubernetes, GKE, Docker, kubectl",
+    "duration": "4 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Derive Insights from BigQuery Data",
     "url": "https://www.cloudskillsboost.google/course_templates/623",
     "level": "Introductory",
     "cost": "6 Credits",
-    "keyword": "BigQuery, SQL, Looker Studio"
+    "keyword": "BigQuery, SQL, Looker Studio",
+    "duration": "4 jam 45 menit",
+    "labs_count": "7"
   },
   {
     "name": "Detect Manufacturing Defects using Visual Inspection AI",
     "url": "https://www.cloudskillsboost.google/course_templates/644",
     "level": "Intermediate",
     "cost": "25 Credits",
-    "keyword": "Visual Inspection AI, Vertex AI"
+    "keyword": "Visual Inspection AI, Vertex AI",
+    "duration": "7 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Develop and Secure APIs with Apigee X",
     "url": "https://www.cloudskillsboost.google/course_templates/714",
     "level": "Intermediate",
     "cost": "26 Credits",
-    "keyword": "Apigee X, API Development, Cloud Run"
+    "keyword": "Apigee X, API Development, Cloud Run",
+    "duration": "9 jam 45 menit",
+    "labs_count": "6"
   },
   {
     "name": "Develop GenAI Apps with Gemini and Streamlit",
     "url": "https://www.cloudskillsboost.google/course_templates/978",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "Gemini, Streamlit, Cloud Run, Vertex AI"
+    "keyword": "Gemini, Streamlit, Cloud Run, Vertex AI",
+    "duration": "5 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Develop Serverless Applications on Cloud Run",
     "url": "https://www.cloudskillsboost.google/course_templates/741",
     "level": "Intermediate",
     "cost": "25 Credits",
-    "keyword": "Cloud Run, Pub/Sub, Serverless"
+    "keyword": "Cloud Run, Pub/Sub, Serverless",
+    "duration": "5 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Develop Serverless Apps with Firebase",
     "url": "https://www.cloudskillsboost.google/course_templates/649",
     "level": "Intermediate",
     "cost": "16 Credits",
-    "keyword": "Firebase, Firestore, Cloud Build"
+    "keyword": "Firebase, Firestore, Cloud Build",
+    "duration": "3 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Develop with Apps Script and AppSheet",
     "url": "https://www.cloudskillsboost.google/course_templates/715",
     "level": "Introductory",
     "cost": "7 Credits",
-    "keyword": "AppSheet, Apps Script, Google Chat"
+    "keyword": "AppSheet, Apps Script, Google Chat",
+    "duration": "3 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Develop your Google Cloud Network",
     "url": "https://www.cloudskillsboost.google/course_templates/625",
     "level": "Intermediate",
     "cost": "18 Credits",
-    "keyword": "VPC, IAM, BigQuery, GKE, Cloud Monitoring"
+    "keyword": "VPC, IAM, BigQuery, GKE, Cloud Monitoring",
+    "duration": "6 jam",
+    "labs_count": "6"
   },
   {
     "name": "Discover and Protect Sensitive Data Across Your Ecosystem",
     "url": "https://www.cloudskillsboost.google/course_templates/1177",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "Sensitive Data Protection, BigQuery, Cloud Storage"
+    "keyword": "Sensitive Data Protection, BigQuery, Cloud Storage",
+    "duration": "6 jam 15 menit",
+    "labs_count": "4"
   },
   {
     "name": "Engineer Data for Predictive Modeling with BigQuery ML",
     "url": "https://www.cloudskillsboost.google/course_templates/627",
     "level": "Intermediate",
     "cost": "15 Credits",
-    "keyword": "BigQuery ML, Dataprep, Dataflow"
+    "keyword": "BigQuery ML, Dataprep, Dataflow",
+    "duration": "4 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Enhance Gemini Model Capabilities",
     "url": "https://www.cloudskillsboost.google/course_templates/1241",
     "level": "Intermediate",
     "cost": "5 Credits",
-    "keyword": "Gemini, Vertex AI, API"
+    "keyword": "Gemini, Vertex AI, API",
+    "duration": "1 jam 45 menit",
+    "labs_count": "6"
   },
   {
     "name": "Explore Generative AI with the Gemini API in Vertex AI",
     "url": "https://www.cloudskillsboost.google/course_templates/959",
     "level": "Intermediate",
     "cost": "15 Credits",
-    "keyword": "Gemini, Vertex AI, Generative AI"
+    "keyword": "Gemini, Vertex AI, Generative AI",
+    "duration": "5 jam",
+    "labs_count": "4"
   },
   {
     "name": "Get Started with API Gateway",
     "url": "https://www.cloudskillsboost.google/course_templates/662",
     "level": "Introductory",
     "cost": "3 Credits",
-    "keyword": "API Gateway, Cloud Run, Pub/Sub"
+    "keyword": "API Gateway, Cloud Run, Pub/Sub",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Get Started with Cloud Storage",
     "url": "https://www.cloudskillsboost.google/course_templates/725",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "Cloud Storage, APIs Explorer"
+    "keyword": "Cloud Storage, APIs Explorer",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Get Started with Dataplex",
     "url": "https://www.cloudskillsboost.google/course_templates/726",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "Dataplex, Data Integration"
+    "keyword": "Dataplex, Data Integration",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Get Started with Eventarc",
     "url": "https://www.cloudskillsboost.google/course_templates/727",
     "level": "Introductory",
     "cost": "3 Credits",
-    "keyword": "Eventarc, Pub/Sub, Cloud Run"
+    "keyword": "Eventarc, Pub/Sub, Cloud Run",
+    "duration": "3 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Get Started with Google Workspace Tools",
     "url": "https://www.cloudskillsboost.google/course_templates/676",
     "level": "Introductory",
     "cost": "No Cost",
-    "keyword": "Gmail, Calendar, Drive, Sheets, AppSheet"
+    "keyword": "Gmail, Calendar, Drive, Sheets, AppSheet",
+    "duration": "3 jam 45 menit",
+    "labs_count": "7"
   },
   {
     "name": "Get Started with Looker",
     "url": "https://www.cloudskillsboost.google/course_templates/647",
     "level": "Introductory",
     "cost": "No Cost",
-    "keyword": "Looker, Looker Studio, BigQuery"
+    "keyword": "Looker, Looker Studio, BigQuery",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Get Started with Pub/Sub",
     "url": "https://www.cloudskillsboost.google/course_templates/728",
     "level": "Introductory",
     "cost": "2 Credits",
-    "keyword": "Pub/Sub, Cloud Scheduler"
+    "keyword": "Pub/Sub, Cloud Scheduler",
+    "duration": "2 jam 15 menit",
+    "labs_count": "3"
   },
   {
     "name": "Get Started with Sensitive Data Protection",
     "url": "https://www.cloudskillsboost.google/course_templates/750",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "Sensitive Data Protection, DLP API"
+    "keyword": "Sensitive Data Protection, DLP API",
+    "duration": "3 jam",
+    "labs_count": "4"
   },
   {
     "name": "Implement CI/CD Pipelines on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/691",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "CI/CD, Cloud Build, GKE, Artifact Registry"
+    "keyword": "CI/CD, Cloud Build, GKE, Artifact Registry",
+    "duration": "4 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Implement Cloud Security Fundamentals on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/645",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "IAM, VPC Peering, KMS, IAP, GKE"
+    "keyword": "IAM, VPC Peering, KMS, IAP, GKE",
+    "duration": "8 jam 15 menit",
+    "labs_count": "8"
   },
   {
     "name": "Implement DevOps Workflows in Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/716",
     "level": "Intermediate",
     "cost": "16 Credits",
-    "keyword": "GKE, Cloud Build, Git, Artifact Registry"
+    "keyword": "GKE, Cloud Build, Git, Artifact Registry",
+    "duration": "4 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Implement Load Balancing on Compute Engine",
     "url": "https://www.cloudskillsboost.google/course_templates/648",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "Load Balancing, Compute Engine"
+    "keyword": "Load Balancing, Compute Engine",
+    "duration": "1 jam 15 menit",
+    "labs_count": "4"
   },
   {
     "name": "Implement Multimodal Vector Search with BigQuery",
     "url": "https://www.cloudskillsboost.google/course_templates/1232",
     "level": "Intermediate",
     "cost": "16 Credits",
-    "keyword": "BigQuery, Gemini, SQL, RAG"
+    "keyword": "BigQuery, Gemini, SQL, RAG",
+    "duration": "5 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Inspect Rich Documents with Gemini Multimodality and Multimodal RAG",
     "url": "https://www.cloudskillsboost.google/course_templates/981",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "Gemini, RAG, Vertex AI"
+    "keyword": "Gemini, RAG, Vertex AI",
+    "duration": "5 jam",
+    "labs_count": "4"
   },
   {
     "name": "Integrate BigQuery Data and Google Workspace using Apps Script",
     "url": "https://www.cloudskillsboost.google/course_templates/737",
     "level": "Introductory",
     "cost": "2 Credits",
-    "keyword": "BigQuery, Apps Script, Google Sheets"
+    "keyword": "BigQuery, Apps Script, Google Sheets",
+    "duration": "3 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Manage Data Models in Looker",
     "url": "https://www.cloudskillsboost.google/course_templates/651",
     "level": "Intermediate",
     "cost": "No Cost",
-    "keyword": "Looker, LookML"
+    "keyword": "Looker, LookML",
+    "duration": "7 jam",
+    "labs_count": "6"
   },
   {
     "name": "Manage Kubernetes in Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/783",
     "level": "Intermediate",
     "cost": "20 Credits",
-    "keyword": "GKE, kubectl, Prometheus"
+    "keyword": "GKE, kubectl, Prometheus",
+    "duration": "5 jam",
+    "labs_count": "4"
   },
   {
     "name": "Migrate MySQL data to Cloud SQL using Database Migration Service",
     "url": "https://www.cloudskillsboost.google/course_templates/629",
     "level": "Introductory",
     "cost": "5 Credits",
-    "keyword": "Cloud SQL, MySQL, Database Migration Service"
+    "keyword": "Cloud SQL, MySQL, Database Migration Service",
+    "duration": "6 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Mitigate Threats and Vulnerabilities with Security Command Center",
     "url": "https://www.cloudskillsboost.google/course_templates/759",
     "level": "Intermediate",
     "cost": "5 Credits",
-    "keyword": "Security Command Center, Web Security Scanner"
+    "keyword": "Security Command Center, Web Security Scanner",
+    "duration": "5 jam 30 menit",
+    "labs_count": "5"
   },
   {
     "name": "Monitor and Log with Google Cloud Observability",
     "url": "https://www.cloudskillsboost.google/course_templates/749",
     "level": "Introductory",
     "cost": "9 Credits",
-    "keyword": "Cloud Monitoring, Cloud Logging"
+    "keyword": "Cloud Monitoring, Cloud Logging",
+    "duration": "4 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Monitor and Manage Google Cloud Resources",
     "url": "https://www.cloudskillsboost.google/course_templates/653",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "IAM, Cloud Monitoring, Cloud Run"
+    "keyword": "IAM, Cloud Monitoring, Cloud Run",
+    "duration": "3 jam",
+    "labs_count": "4"
   },
   {
     "name": "Monitor Environments with Google Cloud Managed Service for Prometheus",
     "url": "https://www.cloudskillsboost.google/course_templates/761",
     "level": "Introductory",
     "cost": "13 Credits",
-    "keyword": "Prometheus, Kubernetes, GKE, Monitoring"
+    "keyword": "Prometheus, Kubernetes, GKE, Monitoring",
+    "duration": "5 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Networking Fundamentals on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/748",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "VPC, Load Balancing, Cloud Networking"
+    "keyword": "VPC, Load Balancing, Cloud Networking",
+    "duration": "4 jam",
+    "labs_count": "4"
   },
   {
     "name": "Optimize Costs for Google Kubernetes Engine",
     "url": "https://www.cloudskillsboost.google/course_templates/655",
     "level": "Intermediate",
     "cost": "25 Credits",
-    "keyword": "GKE, Autoscaling, Cost Optimization"
+    "keyword": "GKE, Autoscaling, Cost Optimization",
+    "duration": "7 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Perform Foundational Infrastructure Tasks in Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/637",
     "level": "Introductory",
     "cost": "8 Credits",
-    "keyword": "Cloud Storage, IAM, Cloud Run, Pub/Sub"
+    "keyword": "Cloud Storage, IAM, Cloud Run, Pub/Sub",
+    "duration": "4 jam",
+    "labs_count": "10"
   },
   {
     "name": "Perform Predictive Data Analysis in BigQuery",
     "url": "https://www.cloudskillsboost.google/course_templates/656",
     "level": "Intermediate",
     "cost": "32 Credits",
-    "keyword": "BigQuery, BigQuery ML, Data Analysis"
+    "keyword": "BigQuery, BigQuery ML, Data Analysis",
+    "duration": "4 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Prepare Data for Looker Dashboards and Reports",
     "url": "https://www.cloudskillsboost.google/course_templates/628",
     "level": "Introductory",
     "cost": "No Cost",
-    "keyword": "Looker, Data Preparation"
+    "keyword": "Looker, Data Preparation",
+    "duration": "4 jam 45 menit",
+    "labs_count": "5"
   },
   {
     "name": "Prepare Data for ML APIs on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/631",
     "level": "Introductory",
     "cost": "13 Credits",
-    "keyword": "Dataprep, Dataflow, Dataproc, ML APIs"
+    "keyword": "Dataprep, Dataflow, Dataproc, ML APIs",
+    "duration": "5 jam",
+    "labs_count": "9"
   },
   {
     "name": "Protect Cloud Traffic with Chrome Enterprise Premium Security",
     "url": "https://www.cloudskillsboost.google/course_templates/784",
     "level": "Intermediate",
     "cost": "16 Credits",
-    "keyword": "Identity-Aware Proxy (IAP), Zero-Trust"
+    "keyword": "Identity-Aware Proxy (IAP), Zero-Trust",
+    "duration": "5 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Prompt Design in Vertex AI",
     "url": "https://www.cloudskillsboost.google/course_templates/976",
     "level": "Introductory",
     "cost": "No Cost",
-    "keyword": "Vertex AI, Prompt Engineering, Gemini"
+    "keyword": "Vertex AI, Prompt Engineering, Gemini",
+    "duration": "3 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Secure BigLake Data",
     "url": "https://www.cloudskillsboost.google/course_templates/751",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "BigLake, BigQuery, Data Catalog, IAM"
+    "keyword": "BigLake, BigQuery, Data Catalog, IAM",
+    "duration": "3 jam",
+    "labs_count": "4"
   },
   {
     "name": "Secure Software Delivery",
     "url": "https://www.cloudskillsboost.google/course_templates/1164",
     "level": "Intermediate",
     "cost": "16 Credits",
-    "keyword": "GKE, Cloud Build, Artifact Registry, CI/CD"
+    "keyword": "GKE, Cloud Build, Artifact Registry, CI/CD",
+    "duration": "4 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Set Up a Google Cloud Network",
     "url": "https://www.cloudskillsboost.google/course_templates/641",
     "level": "Introductory",
     "cost": "8 Credits",
-    "keyword": "VPC, Firewall Rules, Compute Engine"
+    "keyword": "VPC, Firewall Rules, Compute Engine",
+    "duration": "3 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Share Data using Google Data Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/657",
     "level": "Introductory",
     "cost": "9 Credits",
-    "keyword": "BigQuery, Data Sharing, Looker Studio"
+    "keyword": "BigQuery, Data Sharing, Looker Studio",
+    "duration": "3 jam 30 menit",
+    "labs_count": "5"
   },
   {
     "name": "Store, Process, and Manage Data on Google Cloud - Command Line",
     "url": "https://www.cloudskillsboost.google/course_templates/659",
     "level": "Introductory",
     "cost": "3 Credits",
-    "keyword": "Cloud Storage, Cloud Run, Pub/Sub, CLI"
+    "keyword": "Cloud Storage, Cloud Run, Pub/Sub, CLI",
+    "duration": "2 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Store, Process, and Manage Data on Google Cloud - Console",
     "url": "https://www.cloudskillsboost.google/course_templates/658",
     "level": "Introductory",
     "cost": "3 Credits",
-    "keyword": "Cloud Storage, Cloud Run, Pub/Sub, Console"
+    "keyword": "Cloud Storage, Cloud Run, Pub/Sub, Console",
+    "duration": "2 jam 15 menit",
+    "labs_count": "4"
   },
   {
     "name": "Streaming Analytics into BigQuery",
     "url": "https://www.cloudskillsboost.google/course_templates/752",
     "level": "Introductory",
     "cost": "2 Credits",
-    "keyword": "Pub/Sub, Dataflow, BigQuery"
+    "keyword": "Pub/Sub, Dataflow, BigQuery",
+    "duration": "2 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Tag and Discover BigLake Data",
     "url": "https://www.cloudskillsboost.google/course_templates/753",
     "level": "Introductory",
     "cost": "3 Credits",
-    "keyword": "BigLake, BigQuery, Data Catalog, Dataplex"
+    "keyword": "BigLake, BigQuery, Data Catalog, Dataplex",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "The Basics of Google Cloud Compute",
     "url": "https://www.cloudskillsboost.google/course_templates/754",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "Compute Engine, Persistent Disk"
+    "keyword": "Compute Engine, Persistent Disk",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Use APIs to Work with Cloud Storage",
     "url": "https://www.cloudskillsboost.google/course_templates/755",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "Cloud Storage, REST API"
+    "keyword": "Cloud Storage, REST API",
+    "duration": "2 jam 45 menit",
+    "labs_count": "4"
   },
   {
     "name": "Use Functions, Formulas, and Charts in Google Sheets",
     "url": "https://www.cloudskillsboost.google/course_templates/776",
     "level": "Intermediate",
     "cost": "No Cost",
-    "keyword": "Google Sheets, Formulas, Charts"
+    "keyword": "Google Sheets, Formulas, Charts",
+    "duration": "2 jam 45 menit",
+    "labs_count": "6"
   },
   {
     "name": "Use Machine Learning APIs on Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/630",
     "level": "Intermediate",
     "cost": "31 Credits",
-    "keyword": "Vision API, Translation API, Natural Language API"
+    "keyword": "Vision API, Translation API, Natural Language API",
+    "duration": "6 jam 15 menit",
+    "labs_count": "7"
   },
   {
     "name": "Using the Google Cloud Speech API",
     "url": "https://www.cloudskillsboost.google/course_templates/756",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "Speech-to-Text API, Speech Recognition"
+    "keyword": "Speech-to-Text API, Speech Recognition",
+    "duration": "2 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Privileged Access with IAM",
     "url": "https://www.cloudskillsboost.google/course_templates/1337",
     "level": "Intermediate",
     "cost": "4 Credits",
-    "keyword": "Privileged Access Manager, App Engine, Custom Roles"
+    "keyword": "Privileged Access Manager, App Engine, Custom Roles",
+    "duration": "1 jam 15 menit",
+    "labs_count": "5"
   },
   {
     "name": "Implementing Cloud Load Balancing for Compute Engine",
     "url": "https://www.cloudskillsboost.google/course_templates/648",
     "level": "Introductory",
     "cost": "1 Credit",
-    "keyword": "Cloud Load Balancing, Load Blancing, Compute Engine"
+    "keyword": "Cloud Load Balancing, Load Blancing, Compute Engine",
+    "duration": "1 jam 15 menit",
+    "labs_count": "4"
   },
   {
     "name": "Monitoring in Google Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/747",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "Monitoring, Google Cloud, Cloud Monitoring"
+    "keyword": "Monitoring, Google Cloud, Cloud Monitoring",
+    "duration": "3 jam 30 menit",
+    "labs_count": "4"
   },
   {
     "name": "Set Up an App Dev Environment on Google Cloud",
     "url": "https://www.cloudskillsboost.google/paths/8/course_templates/637",
     "level": "Introductory",
     "cost": "4 Credits",
-    "keyword": "App Environment, Cloud Functions, Cloud Storage"
+    "keyword": "App Environment, Cloud Functions, Cloud Storage",
+    "duration": "4 jam",
+    "labs_count": "10"
   },
   {
     "name": "Share Data Using Google Data Cloud",
     "url": "https://www.cloudskillsboost.google/course_templates/657",
     "level": "Introductory",
     "cost": "9 Credits",
-    "keyword": "Data Analytics, Analytics, Google Cloud"
+    "keyword": "Data Analytics, Analytics, Google Cloud",
+    "duration": "3 jam 30 menit",
+    "labs_count": "5"
   }
 ]
