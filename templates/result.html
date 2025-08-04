@@ -10,13 +10,13 @@
     <p class="text-white-50">Analisis lengkap untuk profil dan partisipasi Anda dalam event Arcade.</p>
 </div>
 
-<div class="row g-4">
+<div class="row g-4 mb-4">
     <div class="col-lg-5 d-flex">
         <div class="card glass-card user-profile-card-large w-100">
             <img src="{{ profile_summary.photo_url or url_for('static', filename='images/default-avatar.png') }}" alt="Avatar" class="profile-avatar">
             <h2 class="name">{{ profile_summary.name }}</h2>
             <p class="member-since">{{ profile_summary.member_since }}</p>
-            
+
             <div class="league-info">
                 <h3 class="league-name">{{ profile_summary.league_name }}</h3>
                 <p class="league-points">{{ "{:,}".format(profile_summary.league_points) }} Points</p>
@@ -67,11 +67,11 @@
             </div>
         </div>
     </div>
-    
+
     <div class="col-12">
         <div class="card glass-card">
             <div class="card-header">
-                <h5 class="mb-0 text-white"><i class="fa-solid fa-chart-pie"></i>Informasi Poin Event</h5>
+                <h5 class="mb-0 text-white"><i class="fa-solid fa-chart-pie"></i> Informasi Poin Event</h5>
             </div>
             <div class="card-body p-0">
                 <div class="table-responsive">
@@ -116,7 +116,7 @@
     <div class="col-12">
         <div class="card glass-card">
             <div class="card-header">
-                <h5 class="mb-0 text-white"><i class="fa-solid fa-trophy"></i>Progress Milestones Event</h5>
+                <h5 class="mb-0 text-white"><i class="fa-solid fa-trophy"></i> Progress Milestones Event</h5>
             </div>
             <div class="card-body p-4">
                 {% for m in arcade_summary.milestone_progress %}
@@ -155,7 +155,50 @@
     <div class="col-12">
         <div class="card glass-card">
             <div class="card-header">
-                <h5 class="mb-0 text-white"><i class="fa-solid fa-list-check"></i>Aktivitas Badge Event</h5>
+                <h5 class="mb-0 text-white"><i class="fa-solid fa-list-check"></i> Skill Badge yang belum selesai</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-borderless table-hover mb-0 align-middle">
+                        <thead><tr><th class="text-start">Nama Badge</th>
+                                <th class="text-center d-none d-md-table-cell">Level</th>
+                                <th class="text-center">Durasi</th>
+                                <th class="text-center">Jumlah Lab</th>
+                                <th class="text-end d-none d-lg-table-cell">Cost</th></tr></thead>
+                        <tbody>
+                            {% set level_styles = {'intermediate': {'style': 'text-bg-warning', 'label': 'Intermediate'}, 'introductory': {'style': 'text-bg-info', 'label': 'Introductory'} } %}
+                            {% set labs_styles = {0: {'badge': 'text-bg-primary'}, 4: {'badge': 'text-bg-success'}, 5: {'badge': 'text-bg-info'}, 6: {'badge': 'text-bg-warning'}} %}
+                            {% for badge in unclaimed_badges %}
+                            {% set style = level_styles.get(badge.level|lower, {'label': badge.level|capitalize, 'style': 'text-bg-danger'}) %}
+                            {% set labs = badge.labs_count|int(default=0) %}
+                            {% set labs_style = labs_styles.get(labs, {'badge': 'text-bg-danger'}) %}
+                            <tr class="unclaimed-badge-row {% if loop.index > 5 %}d-none{% endif %}">
+                                <td class="text-start"><a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer" class="text-white fw-bold text-decoration-none">{{ badge.name }} <i class="fa-solid fa-external-link-alt fa-xs ms-1"></i></a></td>
+                                <td class="d-none d-md-table-cell"><span class="badge px-2 py-1 {{ style.style }}" style="color: #fff; font-size: 0.8rem; font-weight: 600;">{{ style.label }}</span></td>
+                                <td><span class="badge px-2 py-1 "> {{ badge.duration }} </span></td>
+                                <td class="text-center"><span class="badge {{ labs_style.badge }}">{{ badge.labs_count }} Lab</span></td>
+                                <td class="text-end d-none d-lg-table-cell"><span class="text-end badge text-white-50">{{ badge.cost }}</span></td>
+                            </tr>
+                            {% endfor %}
+                            {% if not unclaimed_badges %}
+                            <tr><td colspan="3" class="text-center text-white-50 py-5">Tidak ada badge yang ditemukan.</td></tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                    {% if unclaimed_badges|length > 5 %}
+                    <div id="expandRow">
+                        <div colspan="3" class="text-center py-3"><button class="btn btn-sm btn-outline-light" id="toggleUnclaimedBadgeBtn" data-state="collapsed">Lihat Semua ({{ unclaimed_badges|length }})</button></div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="card glass-card">
+            <div class="card-header">
+                <h5 class="mb-0 text-white"><i class="fa-solid fa-list-check"></i> Aktivitas Badge Event</h5>
             </div>
             <div class="card-body p-0">
                 <div class="table-responsive">
@@ -171,7 +214,7 @@
                             {% set category_styles = { 'arcade': {'color': '#00E396', 'icon': 'fa-gamepad', 'label': 'Arcade'}, 'trivia': {'color': '#008FFB', 'icon': 'fa-question-circle', 'label': 'Trivia'}, 'skill': {'color': '#6c757d', 'icon': 'fa-graduation-cap', 'label': 'Skill'}, 'extra': {'color': '#FFC107', 'icon': 'fa-bolt', 'label': 'Poin Ekstra'} } %}
                             {% for name, tipe, date in profile_summary.event_badges %}
                             {% set style = category_styles.get(tipe, {'label': tipe|capitalize, 'color': '#343a40', 'icon': 'fa-question'}) %}
-                            <tr>
+                            <tr class="badge-row {% if loop.index > 5 %}d-none{% endif %}">
                                 <td><strong class="text-white">{{ name }}</strong></td>
                                 <td><span class="badge px-2 py-1" style="background-color: {{ style.color }}; color: #fff; font-size: 0.8rem; font-weight: 600;"><i class="fas {{ style.icon }} me-1"></i> {{ style.label }}</span></td>
                                 <td class="text-end text-white-50">{{ date.strftime('%d %B %Y') }}</td>
@@ -182,6 +225,11 @@
                             {% endif %}
                         </tbody>
                     </table>
+                    {% if profile_summary.event_badges|length > 5 %}
+                    <div id="expandRow">
+                        <div colspan="3" class="text-center py-3"><button class="btn btn-sm btn-outline-light" id="toggleBadgeBtn" data-state="collapsed"> Lihat Semua ({{ profile_summary.event_badges|length }}) </button> </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -194,49 +242,49 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    // === BAGIAN BARU UNTUK MENYIMPAN URL ===
-    {% if profile_summary and profile_summary.profile_url %}
+    document.addEventListener("DOMContentLoaded", function () {
+        // === BAGIAN BARU UNTUK MENYIMPAN URL ===
+        {% if profile_summary and profile_summary.profile_url %}
         localStorage.setItem('savedProfileUrl', '{{ profile_summary.profile_url }}');
-    {% endif %}
-    // === AKHIR BAGIAN BARU ===
+        {% endif %}
+        // === AKHIR BAGIAN BARU ===
 
-    // Grafik Donut Poin Event
-    var donutOptions = {
+        // Grafik Donut Poin Event
+        var donutOptions = {
         series: {{ arcade_summary.chart_points|tojson }},
         chart: { type: 'donut', height: '100%', foreColor: '#adb5bd' },
         labels: ['Arcade', 'Trivia', 'Skill', 'EkstraSkill'],
         colors: ['#00E396', '#008FFB', '#6c757d', '#FFC107'],
         dataLabels: { enabled: false },
         plotOptions: {
-            pie: {
-                expandOnClick: false,
-                donut: {
-                    size: '75%',
-                    labels: {
+        pie: {
+            expandOnClick: false,
+            donut: {
+                size: '75%',
+                labels: {
+                    show: true,
+                    total: {
                         show: true,
-                        total: {
-                            show: true,
-                            label: 'Total Poin Event',
-                            color: '#adb5bd',
-                            fontSize: '16px',
-                            fontWeight: 400,
-                            formatter: function (w) {
-                                const total = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
-                                return parseFloat(total).toFixed(1);
-                            }
-                        },
-                        value: {
-                            show: true,
-                            fontSize: '28px',
-                            fontWeight: 'bold',
-                            color: '#ffffff',
-                            offsetY: 8
-                        },
-                    }
+                        label: 'Total Poin Event',
+                        color: '#adb5bd',
+                        fontSize: '16px',
+                        fontWeight: 400,
+                        formatter: function (w) {
+                            const total = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
+                            return parseFloat(total).toFixed(1);
+                        }
+                    },
+                    value: {
+                        show: true,
+                        fontSize: '28px',
+                        fontWeight: 'bold',
+                        color: '#ffffff',
+                        offsetY: 8
+                    },
                 }
             }
-        },
+        }
+    },
         legend: { position: 'bottom', fontFamily: 'Poppins, sans-serif' },
         tooltip: { theme: 'dark', y: { formatter: (val) => `${val} poin` } },
         stroke: { width: 0 }
@@ -261,6 +309,42 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         document.querySelector("#dailyActivityChart").innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 text-white-50"><i class="fa-solid fa-chart-simple me-2"></i>Tidak ada aktivitas untuk ditampilkan.</div>';
     }
+
+    // Handler Tombol "Lihat Semua" Badge Progress
+    function setupToggle(buttonId, rowSelector, limit) {
+        const btn = document.getElementById(buttonId);
+        const rows = document.querySelectorAll(rowSelector);
+        if (!btn || rows.length <= limit) return;
+
+        function updateDisplay(state) {
+            rows.forEach((row, index) => {
+                if (state === "expanded" || index < limit) {
+                    row.classList.remove("d-none");
+                } else {
+                    row.classList.add("d-none");
+                }
+            });
+
+            if (state === "expanded") {
+                btn.textContent = "Lihat Lebih Sedikit";
+                btn.dataset.state = "expanded";
+            } else {
+                btn.textContent = `Lihat Semua (${rows.length})`;
+                btn.dataset.state = "collapsed";
+            }
+        }
+
+        btn.addEventListener("click", function () {
+            const currentState = btn.dataset.state;
+            const nextState = currentState === "collapsed" ? "expanded" : "collapsed";
+            updateDisplay(nextState);
+        });
+
+        updateDisplay("collapsed");
+    }
+    
+    setupToggle("toggleBadgeBtn", ".badge-row", 5);
+    setupToggle("toggleUnclaimedBadgeBtn", ".unclaimed-badge-row", 5);
 });
 </script>
 {% endblock %}

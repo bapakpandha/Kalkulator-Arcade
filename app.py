@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
-from scrape import fetch_data
+from scrape import fetch_data, load_valid_skill_badges
 from utils import summarize, get_points
 from db import update_stats, log_history, get_leaderboard_data, get_progress_data
 from werkzeug.middleware.proxy_fix import ProxyFix
@@ -85,6 +85,9 @@ def index():
         try:
             profile_data = fetch_data(url)
             event_badges = profile_data["event_badges"]
+            all_skill_badges = load_valid_skill_badges()
+            claimed_badge_names = { " ".join(name.lower().split()) for name, tipe, date in profile_data['event_badges'] if tipe == 'skill' }
+            unclaimed_badges = [ badge for badge in all_skill_badges if " ".join(badge['name'].lower().split()) not in claimed_badge_names ]
             if not event_badges:
                 flash("Tidak ada badge event yang ditemukan atau profil bersifat pribadi.", "warning")
                 return render_template("index.html")
@@ -104,7 +107,8 @@ def index():
                                    stat_id=stat_id,
                                    profile_summary=profile_data,
                                    arcade_summary=arcade_summary,
-                                   daily_activity=daily_activity)
+                                   daily_activity=daily_activity,
+                                   unclaimed_badges=unclaimed_badges)
         except Exception as e:
             flash(f"Terjadi kesalahan: {e}", "danger")
     return render_template("index.html")
