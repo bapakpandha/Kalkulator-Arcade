@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Build Infrastructure with Terraform on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/636",
+    "cost": "5 Credits",
+    "keyword": "Terraform, Infrastructure as Code"
+  },
+  {
+    "name": "Build LookML Objects in Looker",
+    "url": "https://www.cloudskillsboost.google/course_templates/639",
+    "cost": "No Cost",
+    "keyword": "Looker, LookML, Data Engineering"
+  },
+  {
+    "name": "Cloud Speech API: 3 Ways",
+    "url": "https://www.cloudskillsboost.google/course_templates/700",
+    "cost": "1 Credit",
+    "keyword": "Text-to-Speech API, Translation API, Speech API"
+  },
+  {
+    "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/702",
+    "cost": "1 Credit",
+    "keyword": "IAM, gcloud, Service Accounts"
+  },
+  {
+    "name": "Create and Manage AlloyDB Instances",
+    "url": "https://www.cloudskillsboost.google/course_templates/642",
+    "cost": "1 Credit",
+    "keyword": "AlloyDB, SQL, Data Management"
+  },
+  {
+    "name": "Create and Manage Bigtable Instances",
+    "url": "https://www.cloudskillsboost.google/course_templates/650",
+    "cost": "1 Credit",
+    "keyword": "Bigtable, NoSQL, Database Administration"
+  },
+  {
+    "name": "Create and Manage Cloud Spanner Instances",
+    "url": "https://www.cloudskillsboost.google/course_templates/643",
+    "cost": "1 Credit",
+    "keyword": "Cloud Spanner, Databases"
+  },
+  {
+    "name": "Create and Manage Cloud SQL for PostgreSQL Instances",
+    "url": "https://www.cloudskillsboost.google/course_templates/652",
+    "cost": "1 Credit",
+    "keyword": "Cloud SQL, PostgreSQL, Data Migration"
+  },
+  {
+    "name": "Create ML Models with BigQuery ML",
+    "url": "https://www.cloudskillsboost.google/course_templates/626",
+    "cost": "5 Credits",
+    "keyword": "BigQuery ML, Data Analysis"
+  },
+  {
+    "name": "Discover and Protect Sensitive Data Across Your Ecosystem",
+    "url": "https://www.cloudskillsboost.google/course_templates/1177",
+    "cost": "5 Credits",
+    "keyword": "Sensitive Data Protection, BigQuery, Cloud Storage"
+  },
+  {
+    "name": "Enhance Gemini Model Capabilities",
+    "url": "https://www.cloudskillsboost.google/course_templates/1241",
+    "cost": "5 Credits",
+    "keyword": "Gemini, Vertex AI, API"
+  },
+  {
+    "name": "Explore Generative AI with the Gemini API in Vertex AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/959",
+    "cost": "5 Credits",
+    "keyword": "Gemini, Vertex AI, Generative AI"
+  },
+  {
+    "name": "Get Started with Google Workspace Tools",
+    "url": "https://www.cloudskillsboost.google/course_templates/676",
+    "cost": "No Cost",
+    "keyword": "Gmail, Calendar, Drive, Sheets, AppSheet"
+  },
+  {
+    "name": "Perform Predictive Data Analysis in BigQuery",
+    "url": "https://www.cloudskillsboost.google/course_templates/656",
+    "cost": "7 Credits",
+    "keyword": "BigQuery, BigQuery ML, Data Analysis"
+  },
+  {
+    "name": "Use Functions, Formulas, and Charts in Google Sheets",
+    "url": "https://www.cloudskillsboost.google/course_templates/776",
+    "cost": "No Cost",
+    "keyword": "Google Sheets, Formulas, Charts"
+  },
+  {
+    "name": "Privileged Access with IAM",
+    "url": "https://www.cloudskillsboost.google/course_templates/1337",
+    "cost": "7 Credits",
+    "keyword": "Privileged Access Manager, App Engine, Custom Roles"
+  },
+  {
+    "name": "Implementing Cloud Load Balancing for Compute Engine",
+    "url": "https://www.cloudskillsboost.google/course_templates/648",
+    "cost": "1 Credit",
+    "keyword": "Cloud Load Balancing, Load Blancing, Compute Engine"
+  },
+  {
+    "name": "Monitoring in Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/747",
+    "cost": "1 Credits",
+    "keyword": "Monitoring, Google Cloud, Cloud Monitoring"
+  },
+  {
+    "name": "Set Up an App Dev Environment on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/paths/8/course_templates/637",
+    "cost": "1 Credits",
+    "keyword": "App Environment, Cloud Functions, Cloud Storage"
+  }
+]
