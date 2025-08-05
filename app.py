@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import Flask, render_template, request, flash, redirect, url_for, jsonify
 from scrape import fetch_data, load_valid_skill_badges
-from utils import summarize, get_points
-from db import update_stats, log_history, get_leaderboard_data, get_progress_data
+from utils import summarize, get_points, calculate_simulation, calculate_needed_badges
+from db import update_stats, log_history, get_leaderboard_data
 from werkzeug.middleware.proxy_fix import ProxyFix
 from collections import Counter
 from functools import wraps
@@ -11,7 +11,6 @@ import json
 import maxminddb
 
 app = Flask(__name__)
-
 app.secret_key = os.urandom(24)
 
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
@@ -37,19 +36,17 @@ def check_ip_location_local(ip):
     try:
         with maxminddb.open_database(GEOIP_DATABASE) as reader:
             data = reader.get(ip)
-
             if data and 'country_code' in data:
                 country_code = data['country_code']
                 is_allowed = country_code in ALLOWED_COUNTRIES
                 status = "DIIZINKAN" if is_allowed else "DITOLAK"
-                log_ip_access(f"IP {ip} - dari {country_code} - Status: {status}")
+                log_ip_access(f"IP {ip} - Terdeteksi dari negara: {country_code} - Status: {status}")
                 return is_allowed
             else:
-                log_ip_access(f"IP {ip} - 'country_code' tidak ditemukan dalam database - Status: DITOLAK")
+                log_ip_access(f"IP {ip} - 'country_code' tidak ditemukan - Status: DITOLAK")
                 return False
-
     except FileNotFoundError:
-        log_ip_access(f"IP {ip} - GAGAL: File database GeoIP '{GEOIP_DATABASE}' tidak ditemukan.")
+        log_ip_access(f"IP {ip} - GAGAL: File database '{GEOIP_DATABASE}' tidak ditemukan.")
         return False
     except Exception as e:
         log_ip_access(f"IP {ip} - Terjadi error saat validasi: {e}")
@@ -58,9 +55,8 @@ def check_ip_location_local(ip):
 def ip_check_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        ip_addr = request.remote_addr
-        if not check_ip_location_local(ip_addr):
-            return render_template("access_denied.html"), 200
+        if not check_ip_location_local(request.remote_addr):
+            return render_template("access_denied.html"), 403
         return f(*args, **kwargs)
     return decorated_function
 
@@ -72,7 +68,7 @@ def process_daily_activity(badges):
 
 @app.context_processor
 def inject_helpers():
-    return dict(get_points=get_points)
+    return dict(get_points=get_points, request=request)
 
 @app.route("/", methods=["GET", "POST"])
 @ip_check_required
@@ -131,5 +127,68 @@ def skill_badges():
         flash(f"Gagal memuat daftar skill badge: {e}", "danger")
         return redirect(url_for('index'))
 
+@app.route("/fast-track")
+@ip_check_required
+def fast_track():
+    try:
+        with open('fasttrack.json', 'r', encoding='utf-8') as f:
+            fasttrack_data = json.load(f)
+        sorted_data = sorted(fasttrack_data, key=lambda x: x['name'])
+        return render_template("fasttrack.html", fasttracks=sorted_data)
+    except Exception as e:
+        flash(f"Gagal memuat daftar Fast Track: {e}", "danger")
+        return redirect(url_for('index'))
+
+@app.route("/simulator", methods=["GET", "POST"])
+@ip_check_required
+def simulator():
+    if request.method == 'POST':
+        sim_type = request.form.get('sim_type')
+
+        if sim_type == 'calculate_points':
+            try:
+                arcade = int(request.form.get('arcade', 0))
+                trivia = int(request.form.get('trivia', 0))
+                skill = int(request.form.get('skill', 0))
+                result = calculate_simulation(arcade, trivia, skill)
+                return jsonify(result)
+            except (ValueError, TypeError):
+                return jsonify({"error": "Input harus berupa angka."}), 400
+
+        elif sim_type == 'calculate_badges':
+            try:
+                target_score = float(request.form.get('target_score', 0))
+                arcade = int(request.form.get('arcade_base', 0))
+                trivia = int(request.form.get('trivia_base', 0))
+                result = calculate_needed_badges(target_score, arcade, trivia)
+                return jsonify(result)
+            except (ValueError, TypeError):
+                return jsonify({"error": "Input harus berupa angka."}), 400
+
+    return render_template("simulator.html")
+
+@app.route("/easy-sb")
+@ip_check_required
+def easy_sb():
+    try:
+        with open('easysb.json', 'r', encoding='utf-8') as f:
+            easysb_data = json.load(f)
+        sorted_data = sorted(easysb_data, key=lambda x: x['name'])
+        return render_template("easysb.html", easysb_items=sorted_data)
+    except Exception as e:
+        flash(f"Gagal memuat daftar Easy SB: {e}", "danger")
+        return redirect(url_for('index'))
+
+@app.route("/arcade-triva")
+@ip_check_required
+def arcade_triva():
+    try:
+        with open('arcade_triva.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        return render_template("arcade_triva.html", items=data)
+    except Exception as e:
+        flash(f"Gagal memuat daftar Arcade & Triva: {e}", "danger")
+        return redirect(url_for('index'))
+
 if __name__ == "__main__":
-    app.run(debug=True, host='127.0.0.1')
+    app.run(debug=False, host='127.0.0.1')
