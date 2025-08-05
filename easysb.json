@@ -1,0 +1,257 @@
+[
+  {
+    "name": "Analyze BigQuery Data in Connected Sheets",
+    "url": "https://www.cloudskillsboost.google/course_templates/632",
+    "lab": 4
+  },
+  {
+    "name": "Analyze Images with the Cloud Vision API",
+    "url": "https://www.cloudskillsboost.google/course_templates/633",
+    "lab": 4
+  },
+  {
+    "name": "Analyze Sentiment with Natural Language API",
+    "url": "https://www.cloudskillsboost.google/course_templates/667",
+    "lab": 4
+  },
+  {
+    "name": "Analyze Speech and Language with Google APIs",
+    "url": "https://www.cloudskillsboost.google/course_templates/634",
+    "lab": 4
+  },
+  {
+    "name": "App Building with AppSheet",
+    "url": "https://www.cloudskillsboost.google/course_templates/635",
+    "lab": 4
+  },
+  {
+    "name": "App Engine: 3 Ways",
+    "url": "https://www.cloudskillsboost.google/course_templates/671",
+    "lab": 4
+  },
+  {
+    "name": "Automate Data Capture at Scale with Document AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/674",
+    "lab": 4
+  },
+  {
+    "name": "Build and Deploy Machine Learning Solutions on Vertex AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/684",
+    "lab": 4
+  },
+  {
+    "name": "Build Google Cloud Infrastructure for AWS Professionals",
+    "url": "https://www.cloudskillsboost.google/course_templates/687",
+    "lab": 4
+  },
+  {
+    "name": "Build Google Cloud Infrastructure for Azure Professionals",
+    "url": "https://www.cloudskillsboost.google/course_templates/688",
+    "lab": 4
+  },
+  {
+    "name": "Build Real World AI Applications with Gemini and Imagen",
+    "url": "https://www.cloudskillsboost.google/course_templates/1076",
+    "lab": 4
+  },
+  {
+    "name": "Cloud Run Functions: 3 Ways",
+    "url": "https://www.cloudskillsboost.google/course_templates/696",
+    "lab": 4
+  },
+  {
+    "name": "Cloud Speech API: 3 Ways",
+    "url": "https://www.cloudskillsboost.google/course_templates/700",
+    "lab": 4
+  },
+  {
+    "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/702",
+    "lab": 4
+  },
+  {
+    "name": "Create a Secure Data Lake on Cloud Storage",
+    "url": "https://www.cloudskillsboost.google/course_templates/704",
+    "lab": 4
+  },
+  {
+    "name": "Create a Streaming Data Lake on Cloud Storage",
+    "url": "https://www.cloudskillsboost.google/course_templates/705",
+    "lab": 4
+  },
+  {
+    "name": "Deploy Kubernetes Applications on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/663",
+    "lab": 4
+  },
+  {
+    "name": "Develop Serverless Apps with Firebase",
+    "url": "https://www.cloudskillsboost.google/course_templates/649",
+    "lab": 4
+  },
+  {
+    "name": "Develop with Apps Script and AppSheet",
+    "url": "https://www.cloudskillsboost.google/course_templates/715",
+    "lab": 4
+  },
+  {
+    "name": "Discover and Protect Sensitive Data Across Your Ecosystem",
+    "url": "https://www.cloudskillsboost.google/course_templates/1177",
+    "lab": 4
+  },
+  {
+    "name": "Engineer Data for Predictive Modeling with BigQuery ML",
+    "url": "https://www.cloudskillsboost.google/course_templates/627",
+    "lab": 4
+  },
+  {
+    "name": "Explore Generative AI with the Gemini API in Vertex AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/959",
+    "lab": 4
+  },
+  {
+    "name": "Get Started with API Gateway",
+    "url": "https://www.cloudskillsboost.google/course_templates/662",
+    "lab": 4
+  },
+  {
+    "name": "Get Started with Cloud Storage",
+    "url": "https://www.cloudskillsboost.google/course_templates/725",
+    "lab": 4
+  },
+  {
+    "name": "Get Started with Dataplex",
+    "url": "https://www.cloudskillsboost.google/course_templates/726",
+    "lab": 4
+  },
+  {
+    "name": "Get Started with Eventarc",
+    "url": "https://www.cloudskillsboost.google/course_templates/727",
+    "lab": 4
+  },
+  {
+    "name": "Get Started with Looker",
+    "url": "https://www.cloudskillsboost.google/course_templates/647",
+    "lab": 4
+  },
+  {
+    "name": "Get Started with Pub/Sub",
+    "url": "https://www.cloudskillsboost.google/course_templates/728",
+    "lab": 3
+  },
+  {
+    "name": "Get Started with Sensitive Data Protection",
+    "url": "https://www.cloudskillsboost.google/course_templates/750",
+    "lab": 4
+  },
+  {
+    "name": "Implement CI/CD Pipelines on Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/691",
+    "lab": 4
+  },
+  {
+    "name": "Implement DevOps Workflows in Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/716",
+    "lab": 4
+  },
+  {
+    "name": "Implement Load Balancing on Compute Engine",
+    "url": "https://www.cloudskillsboost.google/course_templates/648",
+    "lab": 4
+  },
+  {
+    "name": "Implement Multimodal Vector Search with BigQuery",
+    "url": "https://www.cloudskillsboost.google/course_templates/1232",
+    "lab": 4
+  },
+  {
+    "name": "Inspect Rich Documents with Gemini Multimodality and Multimodal RAG",
+    "url": "https://www.cloudskillsboost.google/course_templates/981",
+    "lab": 4
+  },
+  {
+    "name": "Integrate BigQuery Data and Google Workspace using Apps Script",
+    "url": "https://www.cloudskillsboost.google/course_templates/737",
+    "lab": 4
+  },
+  {
+    "name": "Manage Kubernetes in Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/783",
+    "lab": 4
+  },
+  {
+    "name": "Monitor and Manage Google Cloud Resources",
+    "url": "https://www.cloudskillsboost.google/course_templates/653",
+    "lab": 4
+  },
+  {
+    "name": "Protect Cloud Traffic with Chrome Enterprise Premium Security",
+    "url": "https://www.cloudskillsboost.google/course_templates/784",
+    "lab": 4
+  },
+  {
+    "name": "Prompt Design in Vertex AI",
+    "url": "https://www.cloudskillsboost.google/course_templates/976",
+    "lab": 4
+  },
+  {
+    "name": "Secure BigLake Data",
+    "url": "https://www.cloudskillsboost.google/course_templates/751",
+    "lab": 4
+  },
+  {
+    "name": "Secure Software Delivery",
+    "url": "https://www.cloudskillsboost.google/course_templates/1164",
+    "lab": 4
+  },
+  {
+    "name": "Set Up a Google Cloud Network",
+    "url": "https://www.cloudskillsboost.google/course_templates/641",
+    "lab": 4
+  },
+  {
+    "name": "Store, Process, and Manage Data on Google Cloud - Command Line",
+    "url": "https://www.cloudskillsboost.google/course_templates/659",
+    "lab": 4
+  },
+  {
+    "name": "Store, Process, and Manage Data on Google Cloud - Console",
+    "url": "https://www.cloudskillsboost.google/course_templates/658",
+    "lab": 4
+  },
+  {
+    "name": "Streaming Analytics into BigQuery",
+    "url": "https://www.cloudskillsboost.google/course_templates/752",
+    "lab": 4
+  },
+  {
+    "name": "Tag and Discover BigLake Data",
+    "url": "https://www.cloudskillsboost.google/course_templates/753",
+    "lab": 4
+  },
+  {
+    "name": "The Basics of Google Cloud Compute",
+    "url": "https://www.cloudskillsboost.google/course_templates/754",
+    "lab": 4
+  },
+  {
+    "name": "Use APIs to Work with Cloud Storage",
+    "url": "https://www.cloudskillsboost.google/course_templates/755",
+    "lab": 4
+  },
+  {
+    "name": "Using the Google Cloud Speech API",
+    "url": "https://www.cloudskillsboost.google/course_templates/756",
+    "lab": 4
+  },
+  {
+    "name": "Implementing Cloud Load Balancing for Compute Engine",
+    "url": "https://www.cloudskillsboost.google/course_templates/648",
+    "lab": 4
+  },
+  {
+    "name": "Monitoring in Google Cloud",
+    "url": "https://www.cloudskillsboost.google/course_templates/747",
+    "lab": 4
+  }
+]
