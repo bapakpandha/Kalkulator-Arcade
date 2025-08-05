@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Level 1: Application Design and Delivery",
+        "url": "https://www.cloudskillsboost.google/games/6394",
+        "code": "1q-appdesign-0245",
+        "type": "arcade"
+    },
+    {
+        "name": "Level 2: Building with Cloud Tools",
+        "url": "https://www.cloudskillsboost.google/games/6395",
+        "code": "1q-cloudtool-3109",
+        "type": "arcade"
+    },
+    {
+        "name": "Level 3: Terraform Essentials",
+        "url": "https://www.cloudskillsboost.google/games/6396",
+        "code": "1q-terraform-0480",
+        "type": "arcade"
+    },
+    {
+        "name": "Skills Boost Arcade Trivia August 2025 Week 1",
+        "url": "https://www.cloudskillsboost.google/games/6397",
+        "code": "1q-trivia-2050",
+        "type": "triva"
+    },
+    {
+        "name": "Skills Boost Arcade Trivia August 2025 Week 2",
+        "url": "https://www.cloudskillsboost.google/games/6398",
+        "code": "1q-trivia-7310",
+        "type": "triva"
+    },
+    {
+        "name": "Skills Boost Arcade Trivia August 2025 Week 3",
+        "url": "https://www.cloudskillsboost.google/games/6399",
+        "code": "1q-trivia-2290",
+        "type": "triva"
+    },
+    {
+        "name": "Skills Boost Arcade Trivia August 2025 Week 4",
+        "url": "https://www.cloudskillsboost.google/games/6400",
+        "code": "1q-trivia-5131",
+        "type": "triva"
+    },
+    {
+        "name": "Skills Boost Arcade Base Camp August 2025",
+        "url": "https://www.cloudskillsboost.google/games/6393",
+        "code": "1q-basecamp-2930",
+        "type": "arcade"
+    },
+    {
+        "name": "Skills Boost Arcade Certification Zone August 2025",
+        "url": "",
+        "code": "Coming soon",
+        "type": "arcade"
+    },
+    {
+        "name": "Skills Boost Arcade Special Monthly Game August 2025",
+        "url": "",
+        "code": "Coming soon",
+        "type": "arcade"
+    }
+]

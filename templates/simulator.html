@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="main-nav">
+    <div class="nav-wrapper">
+        <a href="{{ url_for('index') }}" class="nav-link"><i class="fa-solid fa-calculator"></i> Kalkulator</a>
+        <a href="{{ url_for('leaderboard') }}" class="nav-link"><i class="fa-solid fa-trophy"></i> Leaderboard</a>
+        <a href="{{ url_for('skill_badges') }}" class="nav-link"><i class="fa-solid fa-award"></i> Skill Badges</a>
+        <a href="{{ url_for('fast_track') }}" class="nav-link"><i class="fa-solid fa-bolt"></i> Fast Track</a>
+        <a href="{{ url_for('simulator') }}" class="nav-link active"><i class="fa-solid fa-flask-vial"></i> Simulator</a>
+        <a href="{{ url_for('easy_sb') }}" class="nav-link {% if request.endpoint == 'easy_sb' %}active{% endif %}"><i class="fa-solid fa-leaf"></i> Easy SB</a>
+        <a href="{{ url_for('arcade_triva') }}" class="nav-link {% if request.endpoint == 'arcade_triva' %}active{% endif %}"><i class="fa-solid fa-gamepad"></i> Arcade & Triva</a>
+    </div>
+</header>
+
+<div class="leaderboard-header">
+    <h1>Simulator Poin</h1>
+    <p>Rencanakan perolehan poin Anda di sini.</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="simulator-card">
+            <h3>Hitung Total Poin</h3>
+            <form id="calc-points-form">
+                <input type="hidden" name="sim_type" value="calculate_points">
+                <div class="mb-3">
+                    <label for="arcade" class="form-label">Jumlah Arcade Games</label>
+                    <input type="number" class="form-control" id="arcade" name="arcade" value="0" min="0">
+                </div>
+                <div class="mb-3">
+                    <label for="trivia" class="form-label">Jumlah Trivia Badge</label>
+                    <input type="number" class="form-control" id="trivia" name="trivia" value="0" min="0">
+                </div>
+                <div class="mb-3">
+                    <label for="skill" class="form-label">Jumlah Skill Badge</label>
+                    <input type="number" class="form-control" id="skill" name="skill" value="0" min="0">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Hitung</button>
+            </form>
+		<br>
+            <div id="points-result-box" class="result-box d-none">
+                </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="simulator-card">
+            <h3>Hitung Kebutuhan Badge</h3>
+            <form id="calc-badges-form">
+                <input type="hidden" name="sim_type" value="calculate_badges">
+                <div class="mb-3">
+                    <label for="target_score" class="form-label">Target Total Poin</label>
+                    <input type="number" step="0.5" class="form-control" id="target_score" name="target_score" value="50" min="0">
+                </div>
+                <p class="text-white-50 small mb-3">Masukkan jumlah Arcade & Trivia yang sudah/akan Anda selesaikan:</p>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="arcade_base" class="form-label">Arcade Games</label>
+                        <input type="number" class="form-control" id="arcade_base" name="arcade_base" value="0" min="0">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="trivia_base" class="form-label">Trivia</label>
+                        <input type="number" class="form-control" id="trivia_base" name="trivia_base" value="0" min="0">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Cari Tahu</button>
+            </form>
+            <br>
+<div id="badges-result-box" class="result-box d-none">
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const pointsForm = document.getElementById('calc-points-form');
+    const pointsResultBox = document.getElementById('points-result-box');
+
+    pointsForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(pointsForm);
+        
+        fetch("{{ url_for('simulator') }}", {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                pointsResultBox.innerHTML = `<p class="text-danger">${data.error}</p>`;
+            } else {
+                pointsResultBox.innerHTML = `
+                    <h4>Total Poin yang Didapat</h4>
+                    <div class="total-points">${data.total_points.toFixed(1)}</div>
+                    <div class="milestone-info"><i class="fa-solid fa-star me-1"></i>${data.milestone_name}</div>
+                    <hr>
+                    <div class="d-flex justify-content-between result-details text-white-50">
+                        <span>Poin Dasar:</span>
+                        <strong class="text-white">${data.base_points.toFixed(1)}</strong>
+                    </div>
+                    <div class="d-flex justify-content-between result-details text-white-50 mt-1">
+                        <span>Bonus Milestone:</span>
+                        <strong class="text-white">+${data.bonus_points.toFixed(1)}</strong>
+                    </div>
+                `;
+            }
+            pointsResultBox.classList.remove('d-none');
+        });
+    });
+
+    const badgesForm = document.getElementById('calc-badges-form');
+    const badgesResultBox = document.getElementById('badges-result-box');
+
+    badgesForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(badgesForm);
+
+        fetch("{{ url_for('simulator') }}", {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                badgesResultBox.innerHTML = `<p class="text-danger">${data.error}</p>`;
+            } else {
+                badgesResultBox.innerHTML = `
+                    <h4>Anda Butuh</h4>
+                    <div class="total-points">${data.skill_needed}</div>
+                    <div class="milestone-info mb-3">Skill Badge</div>
+                    <p class="small text-white-50">Untuk mencapai <strong>${data.achieved_score.toFixed(1)} poin</strong> dan meraih <strong>${data.milestone_name}</strong>.</p>
+                `;
+            }
+            badgesResultBox.classList.remove('d-none');
+        });
+    });
+});
+</script>
+{% endblock %}

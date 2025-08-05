@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="main-nav">
+    <div class="nav-wrapper">
+        <a href="{{ url_for('index') }}" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">
+            <i class="fa-solid fa-calculator"></i> Kalkulator
+        </a>
+        <a href="{{ url_for('leaderboard') }}" class="nav-link {% if request.endpoint == 'leaderboard' %}active{% endif %}">
+            <i class="fa-solid fa-trophy"></i> Leaderboard
+        </a>
+        <a href="{{ url_for('skill_badges') }}" class="nav-link {% if request.endpoint == 'skill_badges' %}active{% endif %}">
+            <i class="fa-solid fa-award"></i> Skill Badges
+        </a>
+        <a href="{{ url_for('fast_track') }}" class="nav-link {% if request.endpoint == 'fast_track' %}active{% endif %}">
+            <i class="fa-solid fa-bolt"></i> Fast Track
+        </a>
+        <a href="{{ url_for('simulator') }}" class="nav-link {% if request.endpoint == 'simulator' %}active{% endif %}">
+            <i class="fa-solid fa-flask-vial"></i> Simulator
+        </a>
+        <a href="{{ url_for('easy_sb') }}" class="nav-link {% if request.endpoint == 'easy_sb' %}active{% endif %}">
+            <i class="fa-solid fa-leaf"></i> Easy SB
+        </a>
+        <a href="{{ url_for('arcade_triva') }}" class="nav-link {% if request.endpoint == 'arcade_triva' %}active{% endif %}">
+            <i class="fa-solid fa-gamepad"></i> Arcade & Triva
+        </a>
+    </div>
+</header>
+
+<div class="leaderboard-header">
+    <h1>Arcade & Triva</h1>
+    <p>Daftar game Arcade dan Triva bulanan.</p>
+</div>
+
+<div class="card glass-card">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-borderless table-hover mb-0 align-middle">
+                <thead>
+                    <tr>
+                        <th style="width: 1%;">No</th>
+                        <th>Nama Game</th>
+                        <th class="text-center">Tipe</th>
+                        <th>Kode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td class="text-center">{{ loop.index }}</td>
+                        <td>
+                            {% if item.url %}
+                            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="text-white fw-bold text-decoration-none">
+                                {{ item.name }} <i class="fa-solid fa-external-link-alt fa-xs ms-1"></i>
+                            </a>
+                            {% else %}
+                                <span class="text-white fw-bold">{{ item.name }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            {% if item.type == 'arcade' %}
+                                <span class="badge" style="background-color: #00E396; color: #1e202e;">{{ item.type|capitalize }}</span>
+                            {% else %}
+                                <span class="badge" style="background-color: #008FFB;">{{ item.type|capitalize }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <span class="badge text-bg-secondary">{{ item.code }}</span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
