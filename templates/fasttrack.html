@@ -13,8 +13,8 @@
 </header>
 
 <div class="leaderboard-header">
-    <h1>Daftar Skill Badge</h1>
-    <p>Semua skill badge yang bisa anda kerjakan.</p>
+    <h1>Daftar Fast Track</h1>
+    <p>Daftar badge yang masuk dalam kategori Fast Track.</p>
 </div>
 
 <div class="card glass-card">
@@ -25,32 +25,24 @@
                     <tr>
                         <th style="width: 1%;">No</th>
                         <th>Nama Badge</th>
-                        <th class="text-center">Level</th>
-                        <th class="text-center">Cost</th>
+                        <th class="text-center">Biaya</th>
                         <th>Keyword</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for badge in badges %}
+                    {% for item in fasttracks %}
                     <tr>
                         <td class="text-center">{{ loop.index }}</td>
                         <td>
-                            <a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer" class="text-white fw-bold text-decoration-none">
-                                {{ badge.name }} <i class="fa-solid fa-external-link-alt fa-xs ms-1"></i>
+                            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="text-white fw-bold text-decoration-none">
+                                {{ item.name }} <i class="fa-solid fa-external-link-alt fa-xs ms-1"></i>
                             </a>
                         </td>
                         <td class="text-center">
-                            {% if badge.level == 'Intermediate' %}
-                                <span class="badge text-bg-warning">{{ badge.level }}</span>
-                            {% else %}
-                                <span class="badge text-bg-info">{{ badge.level }}</span>
-                            {% endif %}
-                        </td>
-                        <td class="text-center">
-                            <span class="badge text-bg-secondary">{{ badge.cost }}</span>
+                            <span class="badge text-bg-secondary">{{ item.cost }}</span>
                         </td>
                         <td>
-                            <small class="text-white-50">{{ badge.keyword }}</small>
+                            <small class="text-white-50">{{ item.keyword }}</small>
                         </td>
                     </tr>
                     {% endfor %}

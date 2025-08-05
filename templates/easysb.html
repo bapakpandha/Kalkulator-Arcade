@@ -1,20 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
+
 <header class="main-nav">
     <div class="nav-wrapper">
         <a href="{{ url_for('index') }}" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}"><i class="fa-solid fa-calculator"></i> Kalkulator</a>
         <a href="{{ url_for('leaderboard') }}" class="nav-link {% if request.endpoint == 'leaderboard' %}active{% endif %}"><i class="fa-solid fa-trophy"></i> Leaderboard</a>
         <a href="{{ url_for('skill_badges') }}" class="nav-link {% if request.endpoint == 'skill_badges' %}active{% endif %}"><i class="fa-solid fa-award"></i> Skill Badges</a>
         <a href="{{ url_for('fast_track') }}" class="nav-link {% if request.endpoint == 'fast_track' %}active{% endif %}"><i class="fa-solid fa-bolt"></i> Fast Track</a>
-        <a href="{{ url_for('simulator') }}" class="nav-link"><i class="fa-solid fa-flask-vial"></i> Simulator</a>
+        <a href="{{ url_for('simulator') }}" class="nav-link {% if request.endpoint == 'simulator' %}active{% endif %}"><i class="fa-solid fa-flask-vial"></i> Simulator</a>
         <a href="{{ url_for('easy_sb') }}" class="nav-link {% if request.endpoint == 'easy_sb' %}active{% endif %}"><i class="fa-solid fa-leaf"></i> Easy SB</a>
         <a href="{{ url_for('arcade_triva') }}" class="nav-link {% if request.endpoint == 'arcade_triva' %}active{% endif %}"><i class="fa-solid fa-gamepad"></i> Arcade & Triva</a>
     </div>
 </header>
 
 <div class="leaderboard-header">
-    <h1>Daftar Skill Badge</h1>
-    <p>Semua skill badge yang bisa anda kerjakan.</p>
+    <h1>Daftar Easy Skill Badge</h1>
+    <p>Daftar skill badge dengan jumlah lab yang sedikit.</p>
 </div>
 
 <div class="card glass-card">
@@ -25,32 +26,20 @@
                     <tr>
                         <th style="width: 1%;">No</th>
                         <th>Nama Badge</th>
-                        <th class="text-center">Level</th>
-                        <th class="text-center">Cost</th>
-                        <th>Keyword</th>
+                        <th class="text-center">Total Lab</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for badge in badges %}
+                    {% for item in easysb_items %}
                     <tr>
                         <td class="text-center">{{ loop.index }}</td>
                         <td>
-                            <a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer" class="text-white fw-bold text-decoration-none">
-                                {{ badge.name }} <i class="fa-solid fa-external-link-alt fa-xs ms-1"></i>
+                            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="text-white fw-bold text-decoration-none">
+                                {{ item.name }} <i class="fa-solid fa-external-link-alt fa-xs ms-1"></i>
                             </a>
                         </td>
                         <td class="text-center">
-                            {% if badge.level == 'Intermediate' %}
-                                <span class="badge text-bg-warning">{{ badge.level }}</span>
-                            {% else %}
-                                <span class="badge text-bg-info">{{ badge.level }}</span>
-                            {% endif %}
-                        </td>
-                        <td class="text-center">
-                            <span class="badge text-bg-secondary">{{ badge.cost }}</span>
-                        </td>
-                        <td>
-                            <small class="text-white-50">{{ badge.keyword }}</small>
+                            <span class="badge text-bg-success">{{ item.lab }}</span>
                         </td>
                     </tr>
                     {% endfor %}
