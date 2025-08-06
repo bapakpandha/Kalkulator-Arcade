@@ -15,7 +15,7 @@ app.secret_key = os.urandom(24)
 
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 
-LOG_FILE = 'accessip.txt'
+LOG_FILE = 'accessip.log'
 
 def log_ip_access(message):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
