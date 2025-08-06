@@ -1,0 +1,69 @@
+.simulator-card {
+    background: #1e202e;
+    border: 1px solid #3a3f5a;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.simulator-card h3 {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #3a3f5a;
+    padding-bottom: 1rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form-control {
+    background-color: #161823;
+    border: 1px solid #4a5073;
+    color: var(--text-primary);
+}
+
+.form-control:focus {
+    background-color: #161823;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.result-box {
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid var(--card-border);
+    border-radius: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.result-box h4 {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.result-box .total-points {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.result-box .milestone-info {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.result-box hr {
+    border-color: #3a3f5a;
+}
+
+.result-details {
+    font-size: 0.9rem;
+}
