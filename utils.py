@@ -96,3 +96,128 @@ def summarize(badges: List[Badge]) -> Dict:
 
 def get_points() -> Dict:
     return POINTS
+
+def calculate_simulation(arcade, trivia, skill):
+    arcade_points = arcade
+    trivia_points = trivia
+    skill_points = skill / 2
+
+    base_points = arcade_points + trivia_points + skill_points
+
+    milestones = [
+        {
+            "name": "Ultimate Milestone",
+            "arcade": 10,
+            "trivia": 8,
+            "skill": 44,
+            "bonus": 25
+        },
+        {
+            "name": "Milestone 3",
+            "arcade": 8,
+            "trivia": 7,
+            "skill": 30,
+            "bonus": 15
+        },
+        {
+            "name": "Milestone 2",
+            "arcade": 6,
+            "trivia": 6,
+            "skill": 20,
+            "bonus": 10
+        },
+        {
+            "name": "Milestone 1",
+            "arcade": 4,
+            "trivia": 4,
+            "skill": 10,
+            "bonus": 5
+        }
+    ]
+
+    bonus_points = 0
+    milestone_name = "Belum ada"
+
+    for milestone in milestones:
+        if (
+            arcade >= milestone["arcade"]
+            and trivia >= milestone["trivia"]
+            and skill >= milestone["skill"]
+        ):
+            bonus_points = milestone["bonus"]
+            milestone_name = milestone["name"]
+            break
+
+    total_points = base_points + bonus_points
+
+    return {
+        "base_points": base_points,
+        "bonus_points": bonus_points,
+        "milestone_name": milestone_name,
+        "total_points": total_points
+    }
+
+def calculate_needed_badges(target_score, arcade, trivia):
+    milestones = [
+        {
+            "name": "Ultimate Milestone",
+            "arcade": 10,
+            "trivia": 8,
+            "skill": 44,
+            "bonus": 25
+        },
+        {
+            "name": "Milestone 3",
+            "arcade": 8,
+            "trivia": 7,
+            "skill": 30,
+            "bonus": 15
+        },
+        {
+            "name": "Milestone 2",
+            "arcade": 6,
+            "trivia": 6,
+            "skill": 20,
+            "bonus": 10
+        },
+        {
+            "name": "Milestone 1",
+            "arcade": 4,
+            "trivia": 4,
+            "skill": 10,
+            "bonus": 5
+        }
+    ]
+
+
+    for skill in range(0, 500):
+        skill_points = skill / 2
+        base_points = arcade + trivia + skill_points
+
+        bonus_points = 0
+        milestone_name = "Belum ada"
+
+        for milestone in milestones:
+            if (
+                arcade >= milestone["arcade"] and
+                trivia >= milestone["trivia"] and
+                skill >= milestone["skill"]
+            ):
+                bonus_points = milestone["bonus"]
+                milestone_name = milestone["name"]
+                break
+
+        total_points = base_points + bonus_points
+
+        if total_points >= target_score:
+            return {
+                "achieved_score": total_points,
+                "milestone_name": milestone_name,
+                "skill_needed": skill
+            }
+            
+    return {
+        "achieved_score": None,
+        "milestone_name": "Tidak tercapai",
+        "skill_needed": None
+    }
