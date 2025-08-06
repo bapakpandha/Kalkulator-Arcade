@@ -44,7 +44,8 @@ def check_ip_location_local(ip):
                 return is_allowed
             else:
                 log_ip_access(f"IP {ip} - 'country_code' tidak ditemukan - Status: DITOLAK")
-                return False
+                return is_allowed
+                # return False
     except FileNotFoundError:
         log_ip_access(f"IP {ip} - GAGAL: File database '{GEOIP_DATABASE}' tidak ditemukan.")
         return False
